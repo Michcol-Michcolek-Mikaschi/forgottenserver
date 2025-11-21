@@ -1407,6 +1407,7 @@ void LuaScriptInterface::registerFunctions()
 	registerEnum(L, CONDITION_PARAM_SKILL_DISTANCE);
 	registerEnum(L, CONDITION_PARAM_SKILL_SHIELD);
 	registerEnum(L, CONDITION_PARAM_SKILL_FISHING);
+	registerEnum(L, CONDITION_PARAM_SKILL_SZYBKOSC);
 	registerEnum(L, CONDITION_PARAM_STAT_MAXHITPOINTS);
 	registerEnum(L, CONDITION_PARAM_STAT_MAXMANAPOINTS);
 	registerEnum(L, CONDITION_PARAM_STAT_MAGICPOINTS);
@@ -1422,6 +1423,7 @@ void LuaScriptInterface::registerFunctions()
 	registerEnum(L, CONDITION_PARAM_SKILL_DISTANCEPERCENT);
 	registerEnum(L, CONDITION_PARAM_SKILL_SHIELDPERCENT);
 	registerEnum(L, CONDITION_PARAM_SKILL_FISHINGPERCENT);
+	registerEnum(L, CONDITION_PARAM_SKILL_SZYBKOSCPERCENT);
 	registerEnum(L, CONDITION_PARAM_BUFF_SPELL);
 	registerEnum(L, CONDITION_PARAM_SUBID);
 	registerEnum(L, CONDITION_PARAM_FIELD);
@@ -1910,6 +1912,7 @@ void LuaScriptInterface::registerFunctions()
 	registerEnum(L, SKILL_DISTANCE);
 	registerEnum(L, SKILL_SHIELD);
 	registerEnum(L, SKILL_FISHING);
+	registerEnum(L, SKILL_SZYBKOSC);
 	registerEnum(L, SKILL_MAGLEVEL);
 	registerEnum(L, SKILL_LEVEL);
 
@@ -2018,6 +2021,7 @@ void LuaScriptInterface::registerFunctions()
 
 	registerEnum(L, WEAPON_NONE);
 	registerEnum(L, WEAPON_SWORD);
+	registerEnum(L, WEAPON_BAND);
 	registerEnum(L, WEAPON_CLUB);
 	registerEnum(L, WEAPON_AXE);
 	registerEnum(L, WEAPON_SHIELD);
@@ -18009,7 +18013,8 @@ int LuaScriptInterface::luaCreateWeapon(lua_State* L)
 	switch (type) {
 		case WEAPON_SWORD:
 		case WEAPON_AXE:
-		case WEAPON_CLUB: {
+		case WEAPON_CLUB:
+		case WEAPON_BAND: {
 			WeaponMelee* weapon = new WeaponMelee(tfs::lua::getScriptEnv()->getScriptInterface());
 			tfs::lua::pushUserdata(L, weapon);
 			tfs::lua::setMetatable(L, -1, "Weapon");

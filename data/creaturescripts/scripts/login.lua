@@ -36,5 +36,6 @@ function onLogin(player)
 	player:registerEvent("PlayerDeath")
 	player:registerEvent("DropLoot")
 	player:registerEvent("BestiaryKills")
+	player:registerEvent("BankBalanceOpcode")
 	return true
 end

@@ -1,0 +1,22 @@
+<monster name="[Pet] Katsuyu" nameDescription="a katsuyu" race="blood" experience="80" speed="750" manacost="255">
+    <health now="10000" max="10000" />
+    <look type="2137" corpse="0" />
+    <targetchange interval="4000" chance="0" />
+    <flags>
+        <!-- Medical pet with healing abilities -->
+        <flag attackable="1" />
+        <flag hostile="0" />
+        <flag illusionable="1" />
+        <flag convinceable="1" />
+        <flag pushable="1" />
+        <flag canpushitems="0" />
+        <flag canpushcreatures="0" />
+        <flag targetdistance="1" />
+        <flag canwalkonenergy="0" />
+        <flag canwalkonfire="0" />
+        <flag canwalkonpoison="0" />
+    </flags>
+    <script>
+        <event type="think" name="HealScript" script="heal.lua" />
+    </script>
+</monster>

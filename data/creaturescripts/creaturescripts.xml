@@ -5,7 +5,11 @@
 	<event type="login" name="FirstItems" script="first_items.lua" />
 	<event type="login" name="OfflineTraining" script="offline_training.lua" />
 	<event type="login" name="RegenerateStamina" script="regenerate_stamina.lua" />
+	<event type="think" name="HealScript" script="heal.lua" /><!--PRZEROBIĆ NA ADDEVENT-->
 	<event type="death" name="PlayerDeath" script="player_death.lua" />
 	<event type="death" name="DropLoot" script="drop_loot.lua" />
 	<event type="extendedopcode" name="ExtendedOpcode" script="extended_opcode.lua" />
+	
+	<!-- Pet System -->
+	<event type="think" name="SummonThink" script="SummonThink.lua" />
 </creaturescripts>

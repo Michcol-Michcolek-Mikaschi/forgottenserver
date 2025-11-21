@@ -668,6 +668,16 @@ bool ConditionAttributes::setParam(ConditionParam_t param, int32_t value)
 			return true;
 		}
 
+		case CONDITION_PARAM_SKILL_SZYBKOSC: {
+			skills[SKILL_SZYBKOSC] = value;
+			return true;
+		}
+
+		case CONDITION_PARAM_SKILL_SZYBKOSCPERCENT: {
+			skillsPercent[SKILL_SZYBKOSC] = value;
+			return true;
+		}
+
 		case CONDITION_PARAM_STAT_MAXHITPOINTS: {
 			stats[STAT_MAXHITPOINTS] = value;
 			return true;

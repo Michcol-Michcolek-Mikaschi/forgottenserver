@@ -1,3 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- See data/scripts/spells and data/scripts/runes -->
+<!-- Summon Spells -->
+    <instant group="support" spellid="9" name="Hide" words="hide" level="1" mana="10" params="1" cooldown="1000" groupcooldown="1000" needlearn="0" script="summons/hide.lua"/>
+    <instant group="support" spellid="9" name="Summon Demonic Duo" words="demonic duo" level="1" mana="1000" params="1" cooldown="1000" groupcooldown="1000" needlearn="0" script="summons/summon_demonic_duo.lua" />
+    <instant group="support" spellid="9" name="Summon Wolf" words="summon wolf" level="1" params="1" cooldown="1000" groupcooldown="1000" needlearn="0" script="summons/summon_wolf.lua" />
 <spells />

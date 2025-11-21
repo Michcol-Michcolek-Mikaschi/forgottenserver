@@ -227,6 +227,7 @@ const std::unordered_map<std::string, RaceType_t> RaceTypesMap = {
 const std::unordered_map<std::string, WeaponType_t> WeaponTypesMap = {
     {"sword", WEAPON_SWORD},       {"club", WEAPON_CLUB}, {"axe", WEAPON_AXE},         {"shield", WEAPON_SHIELD},
     {"distance", WEAPON_DISTANCE}, {"wand", WEAPON_WAND}, {"ammunition", WEAPON_AMMO}, {"quiver", WEAPON_QUIVER},
+	{"band", WEAPON_BAND},
 };
 
 const std::unordered_map<std::string, FluidTypes_t> FluidTypesMap = {
@@ -1042,6 +1043,11 @@ void Items::parseItemNode(const pugi::xml_node& itemNode, uint16_t id)
 
 				case ITEM_PARSE_SKILLFISH: {
 					abilities.skills[SKILL_FISHING] = pugi::cast<int32_t>(valueAttribute.value());
+					break;
+				}
+
+				case ITEM_PARSE_SKILLSZYBKOSC: {
+					abilities.skills[SKILL_SZYBKOSC] = pugi::cast<int32_t>(valueAttribute.value());
 					break;
 				}
 

@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monsters>
+	<!-- Naruto Pets System -->
+	<monster name="[Pet] Pakkun" file="monsters/B_Pets/Pakkun.xml" />
+	<monster name="[Pet] Gamabunta" file="monsters/B_Pets/Gamabunta.xml" />
+	<monster name="[Pet] Katsuyu" file="monsters/B_Pets/Katsuyu.xml" />
+	<monster name="[Pet] Manda" file="monsters/B_Pets/Manda.xml" />
 	<monster name="a carved stone tile" file="monsters/a_carved_stone_tile.xml" />
 	<monster name="A Shielded Astral Glyph" file="monsters/a_shielded_astral_glyph.xml" />
 	<monster name="Abyssador" file="monsters/abyssador.xml" />

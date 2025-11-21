@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <movements>
+<!--NARUTO PETS SYSTEM-->
+<movevent event="Equip" itemid="56974" slot="ring" script="A_Pet/Pakkun.lua" />
+<movevent event="DeEquip" itemid="56974" slot="ring" script="A_Pet/Pakkun.lua" />
+<movevent event="Equip" itemid="56975" slot="ring" script="A_Pet/Gamabunta.lua" />
+<movevent event="DeEquip" itemid="56975" slot="ring" script="A_Pet/Gamabunta.lua" />
+<movevent event="Equip" itemid="56976" slot="ring" script="A_Pet/Katsuyu.lua" />
+<movevent event="DeEquip" itemid="56976" slot="ring" script="A_Pet/Katsuyu.lua" />
+<movevent event="Equip" itemid="56977" slot="ring" script="A_Pet/Manda.lua" />
+<movevent event="DeEquip" itemid="56977" slot="ring" script="A_Pet/Manda.lua" />
 	<!-- Decaying tiles -->
 	<movevent event="StepIn" itemid="293" script="decay.lua" />
 	<movevent event="StepIn" itemid="461" script="decay.lua" />

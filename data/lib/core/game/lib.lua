@@ -46,6 +46,8 @@ function Game.getSkillType(weaponType)
 		return SKILL_DISTANCE
 	elseif weaponType == WEAPON_SHIELD then
 		return SKILL_SHIELD
+	elseif weaponType == WEAPON_BAND then
+		return SKILL_SZYBKOSC
 	end
 	return SKILL_FIST
 end

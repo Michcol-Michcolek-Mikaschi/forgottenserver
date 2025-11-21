@@ -310,6 +310,11 @@ int32_t Player::getWeaponSkill(const Item* item) const
 			break;
 		}
 
+		case WEAPON_BAND: {
+			attackSkill = getSkillLevel(SKILL_SZYBKOSC);
+			break;
+		}
+
 		default: {
 			attackSkill = 0;
 			break;
@@ -398,12 +403,33 @@ int32_t Player::getDefense() const
 
 uint32_t Player::getAttackSpeed() const
 {
-	const Item* weapon = getWeapon(true);
-	if (!weapon || weapon->getAttackSpeed() == 0) {
-		return vocation->getAttackSpeed();
+	uint32_t baseSpeed = 3000;                              // podstawowa prędkość ataku (3 sekundy)
+	uint32_t minAttackSpeed = 100;                          // minimalna prędkość ataku (10 ataków na sekundę)
+	uint32_t skillSzybkosc = getSkillLevel(SKILL_SZYBKOSC); // poziom umiejętności w używaniu broni
+
+	// Maksymalny modyfikator prędkości ataku
+	uint32_t maxSpeedModifier = 2900;
+
+	// Maksymalny poziom umiejętności
+	uint32_t maxSkillLevel = 170;
+
+	// Oblicz modyfikator prędkości ataku
+	uint32_t speedModifier = skillSzybkosc * (maxSpeedModifier / maxSkillLevel);
+
+	// Ogranicz modyfikator prędkości ataku do wartości maksymalnej
+	if (speedModifier > maxSpeedModifier) {
+		speedModifier = maxSpeedModifier;
 	}
 
-	return weapon->getAttackSpeed();
+	const Item* weapon = getWeapon(true);
+
+	if (!weapon || weapon->getAttackSpeed() == 0 || skillSzybkosc >= maxSkillLevel) {
+		uint32_t attackSpeed = baseSpeed - speedModifier;
+		return attackSpeed < minAttackSpeed ? minAttackSpeed : attackSpeed;
+	}
+
+	uint32_t attackSpeed = weapon->getAttackSpeed() - speedModifier;
+	return attackSpeed < minAttackSpeed ? minAttackSpeed : attackSpeed;
 }
 
 float Player::getAttackFactor() const

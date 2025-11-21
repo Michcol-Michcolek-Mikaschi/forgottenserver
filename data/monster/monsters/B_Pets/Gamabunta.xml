@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="[Pet] Gamabunta" nameDescription="a gamabunta" race="blood" experience="80" speed="750" manacost="255">
+    <health now="10000" max="10000" />
+    <look type="2514" corpse="0" />
+    <targetchange interval="4000" chance="0" />
+    <flags>
+        <flag summonable="1" />
+        <flag attackable="1" />
+        <flag hostile="" />
+        <flag illusionable="1" />
+        <flag convinceable="1" />
+        <flag pushable="1" />
+        <flag canpushitems="0" />
+        <flag canpushcreatures="0" />
+        <flag targetdistance="1" />
+        <flag canwalkonenergy="0" />
+        <flag canwalkonfire="0" />
+        <flag canwalkonpoison="0" />
+    </flags>
+   
+    <attacks>
+		<attack name="melee" interval="2000" min="-0" max="-3000" />
+	</attacks>
+</monster>

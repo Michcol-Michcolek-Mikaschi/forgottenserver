@@ -42941,58 +42941,11 @@
 		<attribute key="containerSize" value="32" />
 	</item>
 	<item id="56970" name="Ninja Hand Wraps">
-		<attribute key="weight" value="5000" />
-		<attribute key="defense" value="27" />
-		<attribute key="attack" value="45" />
-		<attribute key="weaponType" value="band" />
-		<attribute key="slotType" value="two-handed" />
-	</item>
-	<item id="56971" article="a" name="Pergamin Scroll">
-		<attribute key="weight" value="200" />
-		<attribute key="pickupable" value="true" />
-	</item>
-	<item id="56972" article="a" name="crystal upgrade">
-		<attribute key="weight" value="10" />
-		<attribute key="pickupable" value="true" />
-		</item>
-	<item id="56973" name="Pet Random Box">
-    	<attribute key="weight" value="20.00" />
-	</item>
-	<item id="56974" name="Pakkun Collar [Pet] Pakkun">
-		<attribute key="weight" value="20.00" />
-		<attribute key="slotType" value="ring" />
-		<attribute key="description" value="A collar that summons Pakkun, Kakashi's loyal ninja dog." />
-	</item>
-	<item id="56975" name="Toad Contract [Pet] Gamabunta">
-		<attribute key="weight" value="20.00" />
-		<attribute key="slotType" value="ring" />
-		<attribute key="description" value="A summoning contract for the great toad boss Gamabunta." />
-	</item>
-	<item id="56976" name="Slug Contract [Pet] Katsuyu">
-		<attribute key="weight" value="20.00" />
-		<attribute key="slotType" value="ring" />
-		<attribute key="description" value="A summoning contract for the healing slug Katsuyu." />
-	</item>
-	<item id="56977" name="Snake Contract [Pet] Manda">
-		<attribute key="weight" value="20.00" />
-		<attribute key="slotType" value="ring" />
-		<attribute key="description" value="A summoning contract for the giant snake Manda." />
-	</item>
-		<item id="56978" article="a" name="Ninja Sword">
-		<attribute key="weight" value="5000" />
-		<attribute key="defense" value="7" />
-		<attribute key="attack" value="10" />
-		<attribute key="weaponType" value="sword" />
-		<attribute key="slotType" value="two-handed" />
-	</item>
-	<item id="56981" article="a" name="Botle Blue"></item>
-	<item id="56982" article="a" name="Tray"></item>
-	<item id="56983" article="a" name="gold bar">
-		<attribute key="weight" value="10" />
-		<attribute key="worth" value="1000000" />
-	</item>
-	<item id="56984" article="a" name="Crystal Bar">
-		<attribute key="weight" value="10" />
-		<attribute key="worth" value="100000000" />
+		<attribute key="description" value="Hand wraps used by skilled taijutsu fighters."/>
+		<attribute key="weight" value="500"/>
+		<attribute key="attack" value="35"/>
+		<attribute key="defense" value="15"/>
+		<attribute key="weaponType" value="band"/>
+		<attribute key="slotType" value="hand"/>
 	</item>
 </items>

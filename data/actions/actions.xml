@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <actions>
+<!--random boxy -->
+<!--random PET box --> 
+	<action itemid="56973" script="randomboxy/random_pet.lua" /> <!--random PET box -->
+	<action itemid="56971" script="upgradeitems.lua" />
 	<!-- Enchanting -->
 	<action fromid="2146" toid="2147" script="others/enchanting.lua" />
 	<action fromid="2149" toid="2150" script="others/enchanting.lua" />
