@@ -70,12 +70,12 @@ function onSay(player, words, param)
 		return false
 	end
 
-	if not param:find(',') then
+	if param == "" then
 		player:sendTextMessage(MESSAGE_INFO_DESCR, string.format("Usage: %s [item id or name], [count], [subtype or key number], [destination], [player name], [index].\nPossible destinations: %s", words, table.concat(destinations, ", ")))
 		return false
 	end
 
-	local split = param:splitTrimmed(",")
+	local split = param:find(',') and param:splitTrimmed(",") or {param}
 	local itemType = ItemType(split[1])
 	if itemType:getId() == 0 then
 		itemType = ItemType(tonumber(split[1]))

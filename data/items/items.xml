@@ -42995,4 +42995,43 @@
 		<attribute key="weight" value="10" />
 		<attribute key="worth" value="100000000" />
 	</item>
+	<item id="56985" article="a" name="Broom">
+		<attribute key="weight" value="10" />
+	</item>
+	<item id="56986" article="a" name="Pick">
+		<attribute key="weight" value="10" />
+	</item>
+	<item id="56987" article="a" name="Anvil">
+		<attribute key="weight" value="10" />
+	</item>
+	<item id="56988" article="a" name="Drawstring Bag">
+		<attribute key="weight" value="1800" />
+		<attribute key="containerSize" value="10" />
+		<attribute key="slotType" value="backpack" />
+	</item>
+	<item id="56989" article="a" name="Anbu Tactical Mask">
+		<attribute key="weight" value="250" />
+		<attribute key="armor" value="10" />
+		<attribute key="slotType" value="head" />
+	</item>
+	<item id="56990" article="a" name="Scythe">
+		<attribute key="weight" value="10" />
+	</item>
+	<item id="56991" article="a" name="Five Winds Fan">
+		<attribute key="weight" value="2500" />
+		<attribute key="attack" value="35" />
+		<attribute key="weaponType" value="distance" />
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="shootType" value="whirlwindsword" />
+		<attribute key="maxHitChance" value="85" />
+		<attribute key="range" value="5" />
+	</item>
+	<item id="56992" article="a" name="Football">
+		<attribute key="weight" value="10" />
+	</item>
+	<item id="56993" article="a" name="Genin Glover">
+		<attribute key="weight" value="400" />
+		<attribute key="armor" value="2" />
+		<attribute key="slotType" value="ring" />
+	</item>
 </items>
