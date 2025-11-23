@@ -43034,4 +43034,53 @@
 		<attribute key="armor" value="2" />
 		<attribute key="slotType" value="ring" />
 	</item>
+	<item id="56994" article="a" name="Amulet of Soul">
+		<attribute key="weight" value="650" />
+		<attribute key="armor" value="3" />
+		<attribute key="slotType" value="necklace" />
+	</item>
+	<item id="56995" article="a" name="Konoha Headband">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="3" />
+		<attribute key="slotType" value="head" />
+	</item>
+	<item id="56996" article="a" name="First Glover">
+		<attribute key="weight" value="400" />
+		<attribute key="armor" value="2" />
+		<attribute key="slotType" value="ring" />
+	</item>
+	<item id="56997" article="a" name="Strong Glover">
+		<attribute key="weight" value="400" />
+		<attribute key="armor" value="2" />
+		<attribute key="slotType" value="ring" />
+	</item>
+	<item id="56998" article="a" name="Strong Anbbu Mask">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="30" />
+		<attribute key="slotType" value="head" />
+	</item>
+	<item id="56999" article="a" name="Normal Glover">
+		<attribute key="weight" value="400" />
+		<attribute key="armor" value="2" />
+		<attribute key="slotType" value="ring" />
+	</item>
+	<item id="57000" article="a" name="Elite Shinobi Sandals">
+		<attribute key="weight" value="800" />
+		<attribute key="armor" value="2" />
+		<attribute key="slotType" value="feet" />
+	</item>
+	<item id="57001" article="a" name="Big Shuriken">
+		<attribute key="weight" value="250" />
+		<attribute key="attack" value="32" />
+		<attribute key="weaponType" value="distance" />
+		<attribute key="shootType" value="bigshuriken" />
+		<attribute key="maxHitChance" value="80" />
+		<attribute key="range" value="5" />
+	</item>
+	<item id="57002" article="a" name="">
+		<attribute key="weight" value="10" />
+	</item>
+	<item id="57003" article="a" name="">
+		<attribute key="weight" value="10" />
+	</item>
 </items>
