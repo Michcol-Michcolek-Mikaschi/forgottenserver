@@ -259,14 +259,21 @@ Item* Player::getWeapon(slots_t slot, bool ignoreAmmo) const
 
 Item* Player::getWeapon(bool ignoreAmmo /* = false*/) const
 {
-	Item* item = getWeapon(CONST_SLOT_LEFT, ignoreAmmo);
-	if (item) {
-		return item;
+	Item* leftItem = getWeapon(CONST_SLOT_LEFT, ignoreAmmo);
+	Item* rightItem = getWeapon(CONST_SLOT_RIGHT, ignoreAmmo);
+	
+	// Dual-wield: jesli obie rece maja bron, losuj ktora uzyc (50/50)
+	if (leftItem && rightItem) {
+		return uniform_random(0, 1) == 0 ? leftItem : rightItem;
+	}
+	
+	// Standardowo: zwroc lewa, jesli nie ma to prawa
+	if (leftItem) {
+		return leftItem;
 	}
 
-	item = getWeapon(CONST_SLOT_RIGHT, ignoreAmmo);
-	if (item) {
-		return item;
+	if (rightItem) {
+		return rightItem;
 	}
 	return nullptr;
 }
