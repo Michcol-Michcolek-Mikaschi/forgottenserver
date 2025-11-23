@@ -2534,6 +2534,8 @@ ReturnValue Player::queryAdd(int32_t index, const Thing& thing, uint32_t count, 
 						}
 					} else if (item == leftItem && count == item->getItemCount()) {
 						ret = RETURNVALUE_NOERROR;
+					} else if ((leftItem->getSlotPosition() & SLOTP_HAND) && (slotPosition & SLOTP_HAND)) {
+						ret = RETURNVALUE_NOERROR;
 					} else if (leftType == WEAPON_SHIELD && type == WEAPON_SHIELD) {
 						ret = RETURNVALUE_CANONLYUSEONESHIELD;
 					} else if (leftType == WEAPON_NONE || type == WEAPON_NONE || leftType == WEAPON_SHIELD ||
@@ -2588,6 +2590,8 @@ ReturnValue Player::queryAdd(int32_t index, const Thing& thing, uint32_t count, 
 							ret = RETURNVALUE_NOERROR;
 						}
 					} else if (item == rightItem && count == item->getItemCount()) {
+						ret = RETURNVALUE_NOERROR;
+					} else if ((rightItem->getSlotPosition() & SLOTP_HAND) && (slotPosition & SLOTP_HAND)) {
 						ret = RETURNVALUE_NOERROR;
 					} else if (rightType == WEAPON_SHIELD && type == WEAPON_SHIELD) {
 						ret = RETURNVALUE_CANONLYUSEONESHIELD;

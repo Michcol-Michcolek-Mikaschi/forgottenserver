@@ -43022,7 +43022,7 @@
 		<attribute key="attack" value="35" />
 		<attribute key="weaponType" value="distance" />
 		<attribute key="slotType" value="two-handed" />
-		<attribute key="shootType" value="whirlwindsword" />
+		<attribute key="shootType" value="siedemdziesiattrzv" />
 		<attribute key="maxHitChance" value="85" />
 		<attribute key="range" value="5" />
 	</item>
@@ -43077,10 +43077,16 @@
 		<attribute key="maxHitChance" value="80" />
 		<attribute key="range" value="5" />
 	</item>
-	<item id="57002" article="a" name="">
-		<attribute key="weight" value="10" />
+	<item id="57002" article="a" name="Scout Goggles">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="7" />
+		<attribute key="slotType" value="head" />
 	</item>
-	<item id="57003" article="a" name="">
-		<attribute key="weight" value="10" />
+	<item id="57003" article="a" name="Katana Sword">
+		<attribute key="weight" value="5000" />
+		<attribute key="defense" value="7" />
+		<attribute key="attack" value="10" />
+		<attribute key="weaponType" value="sword" />
+		<attribute key="slotType" value="one-handed" />
 	</item>
 </items>
