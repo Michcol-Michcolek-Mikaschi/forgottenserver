@@ -43031,8 +43031,10 @@
 	</item>
 	<item id="56993" article="a" name="Genin Glover">
 		<attribute key="weight" value="400" />
-		<attribute key="armor" value="2" />
-		<attribute key="slotType" value="ring" />
+		<attribute key="defense" value="7" />
+		<attribute key="attack" value="10" />
+		<attribute key="weaponType" value="glover" />
+		<attribute key="slotType" value="one-handed" />
 	</item>
 	<item id="56994" article="a" name="Amulet of Soul">
 		<attribute key="weight" value="650" />
@@ -43046,13 +43048,17 @@
 	</item>
 	<item id="56996" article="a" name="First Glover">
 		<attribute key="weight" value="400" />
-		<attribute key="armor" value="2" />
-		<attribute key="slotType" value="ring" />
+		<attribute key="defense" value="7" />
+		<attribute key="attack" value="10" />
+		<attribute key="slotType" value="one-handed" />
+		<attribute key="weaponType" value="glover" />
 	</item>
 	<item id="56997" article="a" name="Strong Glover">
 		<attribute key="weight" value="400" />
-		<attribute key="armor" value="2" />
-		<attribute key="slotType" value="ring" />
+		<attribute key="defense" value="7" />
+		<attribute key="attack" value="10" />
+		<attribute key="weaponType" value="glover" />
+		<attribute key="slotType" value="one-handed" />
 	</item>
 	<item id="56998" article="a" name="Strong Anbbu Mask">
 		<attribute key="weight" value="1500" />
@@ -43061,8 +43067,10 @@
 	</item>
 	<item id="56999" article="a" name="Normal Glover">
 		<attribute key="weight" value="400" />
-		<attribute key="armor" value="2" />
-		<attribute key="slotType" value="ring" />
+		<attribute key="defense" value="7" />
+		<attribute key="attack" value="10" />
+		<attribute key="weaponType" value="glover" />
+		<attribute key="slotType" value="one-handed" />
 	</item>
 	<item id="57000" article="a" name="Elite Shinobi Sandals">
 		<attribute key="weight" value="800" />
@@ -43097,55 +43105,302 @@
 		<attribute key="weaponType" value="glover" />
 		<attribute key="slotType" value="one-handed" />
 	</item>
-	<!--
-	<item id="57005" article="a" name="">
+	<item id="57005" article="a" name="Sharp Katana">
+		<attribute key="weight" value="5000" />
+		<attribute key="defense" value="10" />
+		<attribute key="attack" value="14" />
+		<attribute key="weaponType" value="sword" />
+		<attribute key="slotType" value="one-handed" />
+	</item>
+	<item id="57006" article="a" name="Kastet">
+		<attribute key="weight" value="800" />
+		<attribute key="attack" value="7" />
+		<attribute key="defense" value="5" />
+		<attribute key="weaponType" value="glover" />
+		<attribute key="slotType" value="one-handed" />
+	</item>
+	<item id="57007" article="a" name="Tunic of the Leaf">
+		<attribute key="weight" value="2500" />
+		<attribute key="armor" value="2" />
+		<attribute key="slotType" value="body" />
+	</item>
+	<item id="57008" article="a" name="Shinobi Sandals">
+		<attribute key="weight" value="800" />
+		<attribute key="armor" value="12" />
+		<attribute key="slotType" value="feet" />
+	</item>
+	<item id="57009" article="a" name="Chakra Potion">
 		<attribute key="weight" value="10" />
 	</item>
-	<item id="57006" article="a" name="">
+	<item id="57010" article="a" name="Syringe">
 		<attribute key="weight" value="10" />
 	</item>
-	<item id="57007" article="a" name="">
+	<item id="57011" article="a" name="Konoha Scroll">
 		<attribute key="weight" value="10" />
 	</item>
-	<item id="57008" article="a" name="">
+	<item id="57012" article="a" name="Pergamin Scroll">
 		<attribute key="weight" value="10" />
 	</item>
-	<item id="57009" article="a" name="">
+	<item id="57013" article="a" name="Scroll Anbu">
 		<attribute key="weight" value="10" />
 	</item>
-	<item id="57010" article="a" name="">
+	<item id="57014" article="a" name="Mission Permit">
 		<attribute key="weight" value="10" />
 	</item>
-	<item id="57011" article="a" name="">
+	<item id="57015" article="a" name="Salmon Fillet">
 		<attribute key="weight" value="10" />
 	</item>
-	<item id="57012" article="a" name="">
-		<attribute key="weight" value="10" />
+	<item id="57016" article="a" name="Ninja Trousers (White)">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="7" />
+		<attribute key="slotType" value="legs" />
 	</item>
-	<item id="57013" article="a" name="">
-		<attribute key="weight" value="10" />
+	<item id="57017" article="a" name="Sasuke Shirt">
+		<attribute key="weight" value="2500" />
+		<attribute key="armor" value="20" />
+		<attribute key="slotType" value="body" />
 	</item>
-	<item id="57014" article="a" name="">
-		<attribute key="weight" value="10" />
+	<item id="57018" article="a" name="Pink Stal Armor">
+		<attribute key="weight" value="2500" />
+		<attribute key="armor" value="10" />
+		<attribute key="slotType" value="body" />
 	</item>
-	<item id="57015" article="a" name="">
-		<attribute key="weight" value="10" />
+	<item id="57019" article="a" name="Samehada">
+		<attribute key="weight" value="1000" />
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="defense" value="40" />
+		<attribute key="attack" value="48" />
+		<attribute key="weaponType" value="sword" />
 	</item>
-	<item id="57016" article="a" name="">
-		<attribute key="weight" value="10" />
+	<item id="57020" article="a" name="Winds Fan">
+		<attribute key="weight" value="2500" />
+		<attribute key="attack" value="39" />
+		<attribute key="weaponType" value="distance" />
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="shootType" value="siedemdziesiattrzv" />
+		<attribute key="maxHitChance" value="85" />
+		<attribute key="range" value="5" />
 	</item>
-	<item id="57017" article="a" name="">
-		<attribute key="weight" value="10" />
+	<item id="57021" article="a" name="Yellow Legs">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="5" />
+		<attribute key="slotType" value="legs" />
 	</item>
-	<item id="57018" article="a" name="">
-		<attribute key="weight" value="10" />
+	<item id="57022" article="a" name="Blue Legs">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="6" />
+		<attribute key="slotType" value="legs" />
 	</item>
-	<item id="57019" article="a" name="">
-		<attribute key="weight" value="10" />
-	</item>-->
+	<item id="57023" article="a" name="Black Boots">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="7" />
+		<attribute key="slotType" value="feet" />
+	</item>
+	<item id="57024" article="a" name="Arctic Sword">
+		<attribute key="weight" value="5000" />
+		<attribute key="defense" value="12" />
+		<attribute key="attack" value="16" />
+		<attribute key="weaponType" value="sword" />
+		<attribute key="slotType" value="two-handed" />
+	
+	</item>
+	<item id="57025" article="a" name="Naruto Genin Legs">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="18" />
+		<attribute key="slotType" value="legs" />
+	
+	</item>
+	<item id="57026" article="a" name="Small Knife">
+		<attribute key="weight" value="800" />
+		<attribute key="defense" value="5" />
+		<attribute key="attack" value="8" />
+		<attribute key="weaponType" value="sword" />
+		<attribute key="slotType" value="one-handed" />
+	
+	</item>
+	<item id="57027" article="a" name="Green Flask">
+	<attribute key="weight" value="800" />
+	</item>
+	<item id="57028" article="a" name="Broken Green Flask">
+	<attribute key="weight" value="800" />
+	</item>
+	<item id="57029" article="a" name="Salsa Sword">
+		<attribute key="weight" value="5000" />
+		<attribute key="defense" value="70" />
+		<attribute key="attack" value="56" />
+		<attribute key="weaponType" value="sword" />
+		<attribute key="slotType" value="two-handed" />
+	</item>
+	<item id="57030" article="a" name="Kusarigama">
+		<attribute key="weight" value="2500" />
+		<attribute key="attack" value="19" />
+		<attribute key="weaponType" value="distance" />
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="shootType" value="siedemdziesiattrzv" />
+		<attribute key="maxHitChance" value="85" />
+		<attribute key="range" value="5" />
+	</item>
+	<item id="57031" article="a" name="Beast Hunter Necklace">
+		<attribute key="weight" value="650" />
+		<attribute key="armor" value="5" />
+		<attribute key="slotType" value="necklace" />
+	</item>
+	<item id="57032" article="a" name="Ninja Blade (Straight)">
+		<attribute key="weight" value="5000" />
+		<attribute key="defense" value="9" />
+		<attribute key="attack" value="12" />
+		<attribute key="weaponType" value="sword" />
+		<attribute key="slotType" value="two-handed" />
+	
+	</item>
+	<item id="57033" article="a" name="Hidan's Scythe">
+		<attribute key="weight" value="10000" />
+		<attribute key="defense" value="125" />
+		<attribute key="attack" value="80" />
+		<attribute key="weaponType" value="sword" />
+		<attribute key="slotType" value="two-handed" />
+	
+	</item>
+	<item id="57034" article="a" name="Shino Aburame Armor">
+		<attribute key="weight" value="2500" />
+		<attribute key="armor" value="25" />
+		<attribute key="slotType" value="body" />
 
-	
-	
-	
+	</item>
+	<item id="57035" article="a" name="Shino Armor">
+		<attribute key="weight" value="2500" />
+		<attribute key="armor" value="20" />
+		<attribute key="slotType" value="body" />
+	</item>
+	<item id="57036" article="a" name="Anbu Mask (Blood Style)">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="25" />
+		<attribute key="slotType" value="head" />
 
+	</item>
+	<item id="57037" article="a" name="Bone Sword">
+		<attribute key="weight" value="5000" />
+		<attribute key="defense" value="15" />
+		<attribute key="attack" value="20" />
+		<attribute key="weaponType" value="sword" />
+		<attribute key="slotType" value="one-handed" />
+
+	</item>
+
+	<item id="57038" article="a" name="Yelow Sword">
+		<attribute key="weight" value="5000" />
+		<attribute key="defense" value="8" />
+		<attribute key="attack" value="11" />
+		<attribute key="weaponType" value="sword" />
+		<attribute key="slotType" value="one-handed" />
+
+	</item>
+	<item id="57039" article="a" name="Shuriken">
+	<attribute key="weight" value="2500" />
+		<attribute key="attack" value="10" />
+		<attribute key="weaponType" value="distance" />
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="shootType" value="szescdziesiatszesc" />
+		<attribute key="maxHitChance" value="85" />
+		<attribute key="range" value="5" />
+	</item>
+	<item id="57040" article="a" name="Nunchaku">
+		<attribute key="weight" value="10000" />
+		<attribute key="defense" value="5" />
+		<attribute key="attack" value="8" />
+		<attribute key="weaponType" value="sword" />
+		<attribute key="slotType" value="two-handed" />
+	</item>
+	<item id="57041" article="a" name="Carrot">
+
+	</item>
+	<item id="57042" article="a" name="Akatsuki Ring">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="25" />
+		<attribute key="slotType" value="ring" />
+	</item>
+	<item id="57043" article="a" name="Dinner fork">
+
+	</item>
+	<item id="57044" article="a" name="Knife Normal">
+
+	</item>
+	<item id="57045" article="a" name="Teaspoon">
+
+	</item>
+	<item id="57046" article="a" name="Leaf Village Jōnin Jacket">
+		<attribute key="weight" value="2500" />
+		<attribute key="armor" value="22" />
+		<attribute key="slotType" value="body" />
+	</item>
+	<item id="57047" article="a" name="Basic Ninja Pants">
+		<attribute key="weight" value="2500" />
+		<attribute key="armor" value="22" />
+		<attribute key="slotType" value="legs" />
+	</item>
+	<item id="57048" article="a" name="Bo Staff (Red)">
+		<attribute key="weight" value="10000" />
+		<attribute key="defense" value="20" />
+		<attribute key="attack" value="25" />
+		<attribute key="weaponType" value="sword" />
+		<attribute key="slotType" value="two-handed" />
+
+	</item>
+	<item id="57049" article="a" name="Katana Raiton">
+		<attribute key="weight" value="5000" />
+		<attribute key="defense" value="34" />
+		<attribute key="attack" value="38" />
+		<attribute key="weaponType" value="sword" />
+		<attribute key="slotType" value="one-handed" />
+
+	</item>
+	<item id="57050" article="a" name="Present Box">
+
+	</item>
+	<item id="57051" article="a" name="Watter Case">
+
+	</item>
+	<item id="57052" article="a" name="Medical-Nin Uniform">
+	<attribute key="weight" value="2500" />
+		<attribute key="armor" value="12" />
+		<attribute key="slotType" value="body" />
+	</item>
+	<item id="57053" article="a" name="Feudal Lord Armor">
+		<attribute key="weight" value="2500" />
+		<attribute key="armor" value="30" />
+		<attribute key="slotType" value="body" />
+
+	</item>
+	<item id="57054" article="a" name="Hyūga Clan Gi">
+		<attribute key="weight" value="2500" />
+		<attribute key="armor" value="28" />
+		<attribute key="slotType" value="body" />
+
+	</item>
+	<item id="57055" article="a" name="Normal Black Legs">
+		<attribute key="weight" value="2500" />
+		<attribute key="armor" value="18" />
+		<attribute key="slotType" value="legs" />
+	</item>
+	<item id="57056" article="a" name="Blue Ninja Legs">
+		<attribute key="weight" value="2500" />
+		<attribute key="armor" value="20" />
+		<attribute key="slotType" value="legs" />
+
+	</item>
+	<item id="57057" article="a" name="Haku Armor">
+		<attribute key="weight" value="2500" />
+		<attribute key="armor" value="22" />
+		<attribute key="slotType" value="body" />
+
+	</item>
+	<item id="57058" article="a" name="Konoha Genin Headband">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="15" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57059" article="a" name="">
+
+	</item>
 </items>
