@@ -498,6 +498,7 @@ enum WeaponType_t : uint8_t
 	WEAPON_AMMO,
 	WEAPON_QUIVER,
 	WEAPON_BAND,
+	WEAPON_GLOVER,
 };
 
 enum Ammo_t : uint8_t

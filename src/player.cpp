@@ -322,6 +322,11 @@ int32_t Player::getWeaponSkill(const Item* item) const
 			break;
 		}
 
+		case WEAPON_GLOVER: {
+			attackSkill = getSkillLevel(SKILL_FIST);
+			break;
+		}
+
 		default: {
 			attackSkill = 0;
 			break;

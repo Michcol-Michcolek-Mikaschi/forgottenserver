@@ -55,7 +55,7 @@ HIGHSCORES_TYPE_SCORE = 2
 HIGHSCORES_CATEGORIES = {
 	[HIGHSCORES_CATEGORY_LEVEL] = { name = "Experience Points", type = HIGHSCORES_TYPE_POINTS },
 	[HIGHSCORES_CATEGORY_MAGLEVEL] = { name = "Magic Level", type = HIGHSCORES_TYPE_SKILLS },
-	[HIGHSCORES_CATEGORY_FIST_FIGHTING] = { name = "Fist Fighting", type = HIGHSCORES_TYPE_SKILLS },
+	[HIGHSCORES_CATEGORY_FIST_FIGHTING] = { name = "Strength", type = HIGHSCORES_TYPE_SKILLS },
 	[HIGHSCORES_CATEGORY_AXE_FIGHTING] = { name = "Axe Fighting", type = HIGHSCORES_TYPE_SKILLS },
 	[HIGHSCORES_CATEGORY_CLUB_FIGHTING] = { name = "Club Fighting", type = HIGHSCORES_TYPE_SKILLS },
 	[HIGHSCORES_CATEGORY_SWORD_FIGHTING] = { name = "Sword Fighting", type = HIGHSCORES_TYPE_SKILLS },
@@ -75,9 +75,9 @@ HIGHSCORES_QUERIES = {
 		FROM `players` WHERE `deletion` = 0 %s
 		ORDER BY `points` DESC, `manaspent` DESC LIMIT ]] .. highscoresMaxResults,
 	[HIGHSCORES_CATEGORY_FIST_FIGHTING] = [[
-		SELECT `id`, `name`, `vocation`, `level`, `skill_fist` AS `points`
+		SELECT `id`, `name`, `vocation`, `level`, `skill_strength` AS `points`
 		FROM `players` WHERE `deletion` = 0 %s
-		ORDER BY `points` DESC, `skill_fist_tries` DESC LIMIT ]] .. highscoresMaxResults,
+		ORDER BY `points` DESC, `skill_strength_tries` DESC LIMIT ]] .. highscoresMaxResults,
 	[HIGHSCORES_CATEGORY_AXE_FIGHTING] = [[
 		SELECT `id`, `name`, `vocation`, `level`, `skill_axe` AS `points`
 		FROM `players` WHERE `deletion` = 0 %s

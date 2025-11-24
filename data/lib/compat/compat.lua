@@ -1552,7 +1552,7 @@ end
 
 do
 	local skills = {
-		[SKILL_FIST] = 'fist fighting',
+		[SKILL_FIST] = 'strength',
 		[SKILL_CLUB] = 'club fighting',
 		[SKILL_SWORD] = 'sword fighting',
 		[SKILL_AXE] = 'axe fighting',

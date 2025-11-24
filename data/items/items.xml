@@ -43089,4 +43089,63 @@
 		<attribute key="weaponType" value="sword" />
 		<attribute key="slotType" value="one-handed" />
 	</item>
+	<item id="57004" article="a" name="White Glover">
+		<attribute key="description" value="Basic training gloves that enhance strength." />
+		<attribute key="weight" value="800" />
+		<attribute key="attack" value="12" />
+		<attribute key="defense" value="8" />
+		<attribute key="weaponType" value="glover" />
+		<attribute key="slotType" value="one-handed" />
+	</item>
+	<!--
+	<item id="57005" article="a" name="">
+		<attribute key="weight" value="10" />
+	</item>
+	<item id="57006" article="a" name="">
+		<attribute key="weight" value="10" />
+	</item>
+	<item id="57007" article="a" name="">
+		<attribute key="weight" value="10" />
+	</item>
+	<item id="57008" article="a" name="">
+		<attribute key="weight" value="10" />
+	</item>
+	<item id="57009" article="a" name="">
+		<attribute key="weight" value="10" />
+	</item>
+	<item id="57010" article="a" name="">
+		<attribute key="weight" value="10" />
+	</item>
+	<item id="57011" article="a" name="">
+		<attribute key="weight" value="10" />
+	</item>
+	<item id="57012" article="a" name="">
+		<attribute key="weight" value="10" />
+	</item>
+	<item id="57013" article="a" name="">
+		<attribute key="weight" value="10" />
+	</item>
+	<item id="57014" article="a" name="">
+		<attribute key="weight" value="10" />
+	</item>
+	<item id="57015" article="a" name="">
+		<attribute key="weight" value="10" />
+	</item>
+	<item id="57016" article="a" name="">
+		<attribute key="weight" value="10" />
+	</item>
+	<item id="57017" article="a" name="">
+		<attribute key="weight" value="10" />
+	</item>
+	<item id="57018" article="a" name="">
+		<attribute key="weight" value="10" />
+	</item>
+	<item id="57019" article="a" name="">
+		<attribute key="weight" value="10" />
+	</item>-->
+
+	
+	
+	
+
 </items>
