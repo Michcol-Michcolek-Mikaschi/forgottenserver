@@ -43312,7 +43312,7 @@
 		<attribute key="slotType" value="two-handed" />
 	</item>
 	<item id="57041" article="a" name="Carrot">
-
+		<attribute key="weight" value="5000" />
 	</item>
 	<item id="57042" article="a" name="Akatsuki Ring">
 		<attribute key="weight" value="1500" />
@@ -43320,13 +43320,13 @@
 		<attribute key="slotType" value="ring" />
 	</item>
 	<item id="57043" article="a" name="Dinner fork">
-
+		<attribute key="weight" value="5000" />
 	</item>
 	<item id="57044" article="a" name="Knife Normal">
-
+		<attribute key="weight" value="5000" />
 	</item>
 	<item id="57045" article="a" name="Teaspoon">
-
+		<attribute key="weight" value="5000" />
 	</item>
 	<item id="57046" article="a" name="Leaf Village Jōnin Jacket">
 		<attribute key="weight" value="2500" />
@@ -43355,10 +43355,10 @@
 
 	</item>
 	<item id="57050" article="a" name="Present Box">
-
+		<attribute key="weight" value="5000" />
 	</item>
 	<item id="57051" article="a" name="Watter Case">
-
+		<attribute key="weight" value="5000" />
 	</item>
 	<item id="57052" article="a" name="Medical-Nin Uniform">
 	<attribute key="weight" value="2500" />
@@ -43424,7 +43424,7 @@
 
 	</item>
 	<item id="57063" article="a" name="Empty">
-
+		<attribute key="weight" value="2500" />
 	</item>
 	<item id="57064" article="a" name="Jonin Battle Kimono">
 		<attribute key="weight" value="2500" />
@@ -43636,9 +43636,703 @@
 
 	</item>
 	<item id="57102" article="a" name="Academy P.E. Shirt">
+		<attribute key="weight" value="4000" />
+		<attribute key="armor" value="5" />
+		<attribute key="slotType" value="body" />
+	</item>
+	<item id="57103" article="a" name="Wanderer's Cape (Yellow)">
+		<attribute key="weight" value="3000" />
+		<attribute key="armor" value="40" />
+		<attribute key="slotType" value="body" />
 
 	</item>
-	<item id="57103" article="a" name="">
+	<item id="57104" article="a" name="Aqua Shinobi Sandals">
+		<attribute key="weight" value="800" />
+		<attribute key="armor" value="14" />
+		<attribute key="slotType" value="feet" />
+
+	</item>
+	<item id="57105" article="a" name="Genin Battle Shorts">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="15" />
+		<attribute key="slotType" value="legs" />
+
+	</item>
+	<item id="57106" article="a" name="Ninja Hakama (White)">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="8" />
+		<attribute key="slotType" value="legs" />
+
+	</item>
+	<item id="57107" article="a" name="Stealth Leggings">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="12" />
+		<attribute key="slotType" value="legs" />
+
+	</item>
+	<item id="57108" article="a" name="Ice Shinobi Pants">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="14" />
+		<attribute key="slotType" value="legs" />
+
+	</item>
+	<item id="57109" article="a" name="Orochimaru Follower Gear">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="16" />
+		<attribute key="slotType" value="legs" />
+	</item>
+	<item id="57110" article="a" name="Stealth Trousers (Grey)">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="10" />
+		<attribute key="slotType" value="legs" />
+
+	</item>
+	<item id="57111" article="a" name="Casual Ninja Trousers">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="12" />
+		<attribute key="slotType" value="legs" />
+
+	</item>
+	<item id="57112" article="a" name="Yin-Yang Balance Tunic">
+		<attribute key="weight" value="2500" />
+		<attribute key="armor" value="35" />
+		<attribute key="slotType" value="legs" />
+
+	</item>
+	<item id="57113" article="a" name="Kirigakure Headband">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="18" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57114" article="a" name="Hat Farmer">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="10" />
+		<attribute key="slotType" value="head" />
+	</item>
+	<item id="57115" article="a" name="Suna Headband">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="20" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57116" article="a" name="Kage Hat Suna">
+		<attribute key="weight" value="2000" />
+		<attribute key="armor" value="30" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57117" article="a" name="Haku Mask">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="22" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57118" article="a" name="Ninja Konoha headband Protector">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="20" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57119" article="a" name="Kage Hat Tsuchikage">
+		<attribute key="weight" value="2000" />
+		<attribute key="armor" value="32" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57120" article="a" name="Anbu offensive Mask">
+		<attribute key="weight" value="2000" />
+		<attribute key="armor" value="31" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57121" article="a" name="Raikage Hat">
+		<attribute key="weight" value="2000" />
+		<attribute key="armor" value="35" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57122" article="a" name="Black Panther Mask">
+		<attribute key="weight" value="2000" />
+		<attribute key="armor" value="28" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57123" article="a" name="Green Shinobi Headband">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="12" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57124" article="a" name="Anbu Deffense Mask">
+		<attribute key="weight" value="2000" />
+		<attribute key="armor" value="33" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57125" article="a" name="Kage orange Hat">
+		<attribute key="weight" value="2000" />
+		<attribute key="armor" value="38" />
+		<attribute key="slotType" value="head" />
+	</item>
+	<item id="57126" article="a" name="Bandana Ninja">
+		<attribute key="weight" value="5000" />
+		<attribute key="armor" value="16" />
+		<attribute key="slotType" value="head" />
+	</item>
+	<item id="57127" article="a" name="Hat Kage Konohagakure">
+		<attribute key="weight" value="2000" />
+		<attribute key="armor" value="38" />
+		<attribute key="slotType" value="head" />
+	</item>
+	<item id="57128" article="a" name="Ninja Pet Headband">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="14" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57129" article="a" name="Genin Katana">
+		<attribute key="weight" value="5000" />
+		<attribute key="defense" value="12" />
+		<attribute key="attack" value="15" />
+		<attribute key="weaponType" value="sword" />
+		<attribute key="slotType" value="one-handed" />
+
+	</item>
+	<item id="57130" article="a" name="Sage Staff">
+		<attribute key="weight" value="10000" />
+		<attribute key="defense" value="40" />
+		<attribute key="attack" value="45" />
+		<attribute key="weaponType" value="sword" />
+		<attribute key="slotType" value="two-handed" />
+
+	</item>
+	<item id="57131" article="a" name="Lightning Blade (Chakra)">
+		<attribute key="weight" value="5000" />
+		<attribute key="defense" value="60" />
+		<attribute key="attack" value="70" />
+		<attribute key="weaponType" value="sword" />
+		<attribute key="slotType" value="one-handed" />
+	</item>
+	<item id="57132" article="a" name="Survival Knife">
+		<attribute key="weight" value="5000" />
+		<attribute key="defense" value="10" />
+		<attribute key="attack" value="13" />
+		<attribute key="weaponType" value="sword" />
+		<attribute key="slotType" value="one-handed" />
+	</item>
+	<item id="57133" article="a" name="Kusarigama (Red)">
+		<attribute key="weight" value="10000" />
+		<attribute key="defense" value="35" />
+		<attribute key="attack" value="40" />
+		<attribute key="weaponType" value="sword" />
+		<attribute key="slotType" value="two-handed" />
+
+	</item>
+	<item id="57134" article="a" name="Triple-Bladed Kunai">
+		<attribute key="weight" value="10000" />
+		<attribute key="defense" value="39" />
+		<attribute key="attack" value="49" />
+		<attribute key="weaponType" value="sword" />
+		<attribute key="slotType" value="two-handed" />
+	</item>
+	<item id="57135" article="a" name="Hidden Sound Headband">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="22" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57136" article="a" name="Akatsuki Backpack">
+		<attribute key="weight" value="1800" />
+		<attribute key="containerSize" value="35" />
+		<attribute key="slotType" value="backpack" />
+	</item>
+	<item id="57137" article="a" name="Fūma Shuriken (Small)">
+		<attribute key="weight" value="2500" />
+		<attribute key="attack" value="12" />
+		<attribute key="weaponType" value="distance" />
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="shootType" value="siedemdziesiatsiedem" />
+		<attribute key="maxHitChance" value="85" />
+		<attribute key="range" value="5" />
+	</item>
+	<item id="57138" article="a" name="Academy Top Goggles">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="8" />
+		<attribute key="slotType" value="head" />
+	</item>
+	<item id="57139" article="a" name="Training Shirt (Blue)">
+		<attribute key="weight" value="2500" />
+		<attribute key="armor" value="12" />
+		<attribute key="slotType" value="body" />
+	</item>
+	<item id="57140" article="a" name="Hiruzen's Tunic">
+		<attribute key="weight" value="3000" />
+		<attribute key="armor" value="65" />
+		<attribute key="slotType" value="body" />
+
+	</item>
+	<item id="57141" article="a" name="Shino Armor">
+		<attribute key="weight" value="2500" />
+		<attribute key="armor" value="32" />
+		<attribute key="slotType" value="body" />
+
+	</item>
+	<item id="57142" article="a" name="Heavy Flak Vest">
+		<attribute key="weight" value="3000" />
+		<attribute key="armor" value="50" />
+		<attribute key="slotType" value="body" />
+
+	</item>
+	<item id="57143" article="a" name="Book Jutsu">
+		<attribute key="weight" value="3000" />
+	</item>
+	<item id="57144" article="a" name="Blue ninja blouse">
+		<attribute key="weight" value="2500" />
+		<attribute key="armor" value="20" />
+		<attribute key="slotType" value="body" />
+	</item>
+	<item id="57145" article="a" name="Orginal Akatsuki Coat">
+		<attribute key="weight" value="3000" />
+		<attribute key="armor" value="65" />
+		<attribute key="slotType" value="body" />
+	</item>
+	<item id="57146" article="a" name="Chakra Claw Gauntlet">
+		<attribute key="weight" value="5000" />
+		<attribute key="defense" value="12" />
+		<attribute key="attack" value="15" />
+		<attribute key="weaponType" value="glover" />
+		<attribute key="slotType" value="one-handed" />
+	</item>
+	<item id="57147" article="a" name="Gift Box">
+		<attribute key="weight" value="5000" />
+	</item>
+	<item id="57148" article="a" name="Scroll Small">
+		<attribute key="weight" value="5000" />
+	</item>
+	<item id="57149" article="a" name="Forbidden Scroll">
+		<attribute key="weight" value="5000" />
+	</item>
+	<item id="57150" article="a" name="Money Bag">
+		<attribute key="weight" value="5000" />
+	</item>
+	<item id="57151" article="a" name="Akatsuki Necklace">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="25" />
+		<attribute key="slotType" value="necklace" />
+	</item>
+	<item id="57152" article="a" name="ANBU Black Ops Vest">
+		<attribute key="weight" value="3000" />
+		<attribute key="armor" value="55" />
+		<attribute key="slotType" value="body" />
+
+	</item>
+	<item id="57153" article="a" name="Hokage Hat Red">
+		<attribute key="weight" value="5000" />
+		<attribute key="armor" value="40" />
+		<attribute key="slotType" value="head" />
+	</item>
+	<item id="57154" article="a" name="White Shirt Sasuke">
+		<attribute key="weight" value="2500" />
+		<attribute key="armor" value="18" />
+		<attribute key="slotType" value="body" />
+
+	</item>
+	<item id="57155" article="a" name="Hokage normal Coat">
+		<attribute key="weight" value="3000" />
+		<attribute key="armor" value="50" />
+		<attribute key="slotType" value="body" />
+
+	</item>
+	<item id="57156" article="a" name="Shinobi Boots (Blue)">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="35" />
+		<attribute key="slotType" value="feet" />
+
+	</item>
+	<item id="57157" article="a" name="Sand">
+		<attribute key="weight" value="1500" />
+
+	</item>
+	<item id="57158" article="a" name="Chakra Soul Neklace">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="30" />
+		<attribute key="slotType" value="necklace" />
+
+	</item>
+	<item id="57159" article="a" name="Hedband">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="16" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57160" article="a" name="Black normal boots">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="20" />
+		<attribute key="slotType" value="feet" />
+	</item>
+	<item id="57161" article="a" name="Haku Tunic">
+		<attribute key="weight" value="2500" />
+		<attribute key="armor" value="26" />
+		<attribute key="slotType" value="body" />
+
+	</item>
+	<item id="57162" article="a" name="Hiruzen's Hat">
+		<attribute key="weight" value="2000" />
+		<attribute key="armor" value="40" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57163" article="a" name="Special Gloves">
+		<attribute key="weight" value="5000" />
+		<attribute key="defense" value="22" />
+		<attribute key="attack" value="25" />
+		<attribute key="weaponType" value="glover" />
+		<attribute key="slotType" value="one-handed" />
+
+
+	</item>
+	<item id="57164" article="a" name="Teen Googles">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="12" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57165" article="a" name="Akatsuk Hat">
+		<attribute key="weight" value="2000" />
+		<attribute key="armor" value="35" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57166" article="a" name="Head Cap Protector">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="18" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57167" article="a" name="Red Shinobi Kage Hat">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="16" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57168" article="a" name="Blue sasuke Shirt">
+		<attribute key="weight" value="2500" />
+		<attribute key="armor" value="20" />
+		<attribute key="slotType" value="body" />
+
+	</item>
+	<item id="57169" article="a" name="Anbu Mask Special">
+		<attribute key="weight" value="2000" />
+		<attribute key="armor" value="36" />
+		<attribute key="slotType" value="head" />
+	</item>
+	<item id="57170" article="a" name="Anbu Mask Special 2">
+		<attribute key="weight" value="2000" />
+		<attribute key="armor" value="46" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57171" article="a" name="Anbu Mask Special 3">
+		<attribute key="weight" value="2000" />
+		<attribute key="armor" value="56" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57172" article="a" name="Teen Konoha Shirt">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="14" />
+		<attribute key="slotType" value="body" />
+
+	</item>
+	<item id="57173" article="a" name="Anbu Vest">
+		<attribute key="weight" value="3000" />
+		<attribute key="armor" value="16" />
+		<attribute key="slotType" value="body" />
+
+	</item>
+	<item id="57174" article="a" name="Jonin Tactical Vest">
+		<attribute key="weight" value="2500" />
+		<attribute key="armor" value="40" />
+		<attribute key="slotType" value="body" />
+
+	</item>
+	<item id="57175" article="a" name="Shinobi Pants (Black)">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="30" />
+		<attribute key="slotType" value="legs" />
+
+	</item>
+	<item id="57176" article="a" name="Green Legs Shinobi">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="28" />
+		<attribute key="slotType" value="legs" />
+
+	</item>
+	<item id="57177" article="a" name="Orochimaru Leggings">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="32" />
+		<attribute key="slotType" value="legs" />
+
+	</item>
+	<item id="57178" article="a" name="Scout Boots">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="30" />
+		<attribute key="slotType" value="feet" />
+
+	</item>
+	<item id="57179" article="a" name="Black ANBU Boots">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="40" />
+		<attribute key="slotType" value="feet" />
+
+	</item>
+	<item id="57180" article="a" name="Sasuke Old Legs">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="22" />
+		<attribute key="slotType" value="legs" />
+
+	</item>
+	<item id="57181" article="a" name="Chips">
+		<attribute key="weight" value="5000" />
+
+	</item>
+	<item id="57182" article="a" name="Suna Headguard">
+		<attribute key="weight" value="2000" />
+		<attribute key="armor" value="28" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57183" article="a" name="Black Shinobi Helmet">
+		<attribute key="weight" value="2000" />
+		<attribute key="armor" value="30" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57184" article="a" name="Normal Shinobi Boots">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="25" />
+		<attribute key="slotType" value="feet" />
+
+	</item>
+	<item id="57185" article="a" name="Wooden Boots">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="15" />
+		<attribute key="slotType" value="feet" />
+
+	</item>
+	<item id="57186" article="a" name="Sasuke Old Shirt">
+		<attribute key="weight" value="2500" />
+		<attribute key="armor" value="15" />
+		<attribute key="slotType" value="body" />
+
+	</item>
+	<item id="57187" article="a" name="Big Band's">	
+		<attribute key="weight" value="5000" />
+		<attribute key="defense" value="27" />
+		<attribute key="attack" value="45" />
+		<attribute key="weaponType" value="band" />
+		<attribute key="slotType" value="two-handed" />
+
+	</item>
+	<item id="57188" article="a" name="Naruto Orginal Legs">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="18" />
+		<attribute key="slotType" value="legs" />
+	</item>
+	<item id="57189" article="a" name="Naruto Orginal Bluse">
+		<attribute key="weight" value="2500" />
+		<attribute key="armor" value="22" />
+		<attribute key="slotType" value="body" />
+
+	</item>
+	<item id="57190" article="a" name="Haku Mask Normal">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="20" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57191" article="a" name="Akatsuki Hat Small">
+		<attribute key="weight" value="2000" />
+		<attribute key="armor" value="25" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57192" article="a" name="Skull Helmet">
+		<attribute key="weight" value="2000" />
+		<attribute key="armor" value="45" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57193" article="a" name="Black Normal Legs">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="20" />
+		<attribute key="slotType" value="legs" />
+
+	</item>
+	<item id="57194" article="a" name="Normal Tunic">
+		<attribute key="weight" value="2500" />
+		<attribute key="armor" value="15" />
+		<attribute key="slotType" value="body" />
+
+	</item>
+	<item id="57195" article="a" name="White Legs Shinobi">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="15" />
+		<attribute key="slotType" value="legs" />
+
+	</item>
+	<item id="57196" article="a" name="Blue-White Boots">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="28" />
+		<attribute key="slotType" value="feet" />
+
+	</item>
+	<item id="57197" article="a" name="Orochimaru Armor">
+		<attribute key="weight" value="2500" />
+		<attribute key="armor" value="34" />
+		<attribute key="slotType" value="body" />
+
+	</item>
+	<item id="57198" article="a" name="Green Legs Small Shinobi">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="20" />
+		<attribute key="slotType" value="legs" />
+
+	</item>
+	<item id="57199" article="a" name="Blue Special Legs Shinobi">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="22" />
+		<attribute key="slotType" value="legs" />
+	</item>
+	<item id="57200" article="a" name="Suna Legs Shinobi">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="25" />
+		<attribute key="slotType" value="legs" />
+
+	</item>
+	<item id="57201" article="a" name="Old Armor">
+		<attribute key="weight" value="4000" />
+		<attribute key="armor" value="70" />
+		<attribute key="slotType" value="body" />
+
+	</item>
+	<item id="57202" article="a" name="Green Shinobi Shirt Konoha">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="32" />
+		<attribute key="slotType" value="body" />
+
+	</item>
+	<item id="57203" article="a" name="Kakashi Boots">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="38" />
+		<attribute key="slotType" value="feet" />
+
+	</item>
+	<item id="57204" article="a" name="Purple Shirt">
+		<attribute key="weight" value="2500" />
+		<attribute key="armor" value="28" />
+		<attribute key="slotType" value="body" />
+
+	</item>
+	<item id="57205" article="a" name="Moob Shirt">
+		<attribute key="weight" value="2500" />
+		<attribute key="armor" value="26" />
+		<attribute key="slotType" value="body" />
+	</item>
+	<item id="57206" article="a" name="Big Black Boots">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="40" />
+		<attribute key="slotType" value="feet" />
+	</item>
+	<item id="57207" article="a" name="Anbu Black Ops Helmet">
+		<attribute key="weight" value="2000" />
+		<attribute key="armor" value="50" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57208" article="a" name="Shino Shirt">
+		<attribute key="weight" value="2500" />
+		<attribute key="armor" value="30" />
+		<attribute key="slotType" value="body" />
+
+	</item>
+	<item id="57209" article="a" name="Mizukage Tunic">
+		<attribute key="weight" value="3000" />
+		<attribute key="armor" value="70" />
+		<attribute key="slotType" value="body" />
+
+	</item>
+	<item id="57210" article="a" name="Purple Kage Tunic">
+		<attribute key="weight" value="3000" />
+		<attribute key="armor" value="60" />
+		<attribute key="slotType" value="body" />
+
+	</item>
+	<item id="57211" article="a" name="Purple Kage Hat">
+		<attribute key="weight" value="2000" />
+		<attribute key="armor" value="45" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57212" article="a" name="Googles">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="10" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57213" article="a" name="Konoha Headband Protector">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="22" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57214" article="a" name="Kankuro Helmet">
+		<attribute key="weight" value="2000" />
+		<attribute key="armor" value="38" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57215" article="a" name="Headband Protector Special">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="28" />
+		<attribute key="slotType" value="head" />
+	</item>
+	<item id="57216" article="a" name="Purple Armor">
+		<attribute key="weight" value="4000" />
+		<attribute key="armor" value="80" />
+		<attribute key="slotType" value="body" />
+
+	</item>
+	<item id="57217" article="a" name="Orochimaru Tunic">
+		<attribute key="weight" value="3000" />
+		<attribute key="armor" value="55" />
+		<attribute key="slotType" value="body" />
+
+	</item>
+	<item id="57218" article="a" name="Kiba Armor">
+		<attribute key="weight" value="3000" />
+		<attribute key="armor" value="45" />
+		<attribute key="slotType" value="body" />
+	</item>
+	<item id="57219" article="a" name="Shinobi Special Legs">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="25" />
+		<attribute key="slotType" value="legs" />
+	</item>
+	<item id="57220" article="a" name="Black Headband">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="20" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57221" article="a" name="Naruto Jacket">
+		<attribute key="weight" value="3000" />
+		<attribute key="armor" value="40" />
+		<attribute key="slotType" value="body" />
+
+	</item>
+	<item id="57222" article="a" name="">
 
 	</item>
 
