@@ -46093,4 +46093,267 @@
 		<attribute key="slotType" value="legs" />
 
 	</item>
+	<item id="57536" article="a" name="Legendary Coat Chakra Kuybi">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="body" />
+	</item>
+	<item id="57537" article="a" name="Legendary Boots Chakra Kuybi">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="feet" />
+
+	</item>
+	<item id="57538" article="a" name="Truth-Seeking Balls Staff">
+		<attribute key="weight" value="7000" />
+		<attribute key="attack" value="50" />
+		<attribute key="defense" value="40" />
+		<attribute key="weaponType" value="sword" />
+		<attribute key="slotType" value="two-handed" />
+	
+	</item>
+	<item id="57539" article="a" name="Legendary Headband Chakra Kuybi">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="head" />
+	</item>
+	<item id="57540" article="a" name="Black Saninn Legs">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="legs" />
+	
+	</item>
+	<item id="57541" article="a" name="Eaye Sage Robe">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="head" />
+	
+	</item>
+	<item id="57542" article="a" name="Danzo Doll">
+		<attribute key="weight" value="1000" />
+	</item>
+	<item id="57543" article="a" name="Deidara Doll">
+		<attribute key="weight" value="1000" />
+	
+	</item>
+	<item id="57544" article="a" name="Zetsu Doll">
+		<attribute key="weight" value="1000" />
+	</item>
+	<item id="57545" article="a" name="Gara Doll">
+		<attribute key="weight" value="1000" />
+	</item>
+	<item id="57546" article="a" name="Itachi Doll">
+		<attribute key="weight" value="1000" />
+	</item>
+	<item id="57547" article="a" name="Naruto Doll">
+		<attribute key="weight" value="1000" />
+	</item>
+	<item id="57548" article="a" name="Nice Backpack">
+		<attribute key="weight" value="5000" />
+		<attribute key="defense" value="20" />
+		<attribute key="armor" value="15" />
+		<attribute key="slotType" value="backpack" />
+	</item>
+	<item id="57549" article="a" name="Obito Doll">
+		<attribute key="weight" value="1000" />
+	</item>
+	<item id="57550" article="a" name="Uchciha Armor">
+		<attribute key="weight" value="1000" />
+		<attribute key="armor" value="100" />
+		<attribute key="slotType" value="body" />
+	</item>
+	<item id="57551" article="a" name="Backpack of Shadows">
+		<attribute key="weight" value="5000" />
+		<attribute key="defense" value="25" />
+		<attribute key="armor" value="20" />
+		<attribute key="slotType" value="backpack" />
+	
+	</item>
+	<item id="57552" article="a" name="Special Doll">
+		<attribute key="weight" value="1000" />
+	
+	</item>
+	<item id="57553" article="a" name="Legendary Paper Bomb Sword">
+		<attribute key="weight" value="7000" />
+		<attribute key="attack" value="50" />
+		<attribute key="defense" value="40" />
+		<attribute key="weaponType" value="sword" />
+		<attribute key="slotType" value="two-handed" />
+	</item>
+	<item id="57554" article="a" name="Shark Sword">
+		<attribute key="weight" value="7000" />
+		<attribute key="attack" value="45" />
+		<attribute key="defense" value="35" />
+		<attribute key="weaponType" value="sword" />
+		<attribute key="slotType" value="two-handed" />
+	</item>
+	<item id="57555" article="a" name="Obito Tunic">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="body" />
+	
+	</item>
+	<item id="57556" article="a" name="Truth-Seeking Rods">
+		<attribute key="weight" value="7000" />
+		<attribute key="attack" value="50" />
+		<attribute key="defense" value="40" />
+		<attribute key="weaponType" value="sword" />
+		<attribute key="slotType" value="two-handed" />
+	
+	</item>
+	<item id="57557" article="a" name="Duble boots">
+		<attribute key="weight" value="2000" />
+		<attribute key="armor" value="200" />
+		<attribute key="slotType" value="feet" />
+	
+	</item>
+	<item id="57558" article="a" name="Double Headband">
+		<attribute key="weight" value="2000" />
+		<attribute key="armor" value="200" />
+		<attribute key="slotType" value="head" />
+	
+	</item>
+	<item id="57559" article="a" name="Sannin Rare Legs">
+		<attribute key="weight" value="2000" />
+		<attribute key="armor" value="200" />
+		<attribute key="slotType" value="legs" />
+	
+	</item>
+	<item id="57560" article="a" name="Double Coat">
+		<attribute key="weight" value="2000" />
+		<attribute key="armor" value="200" />
+		<attribute key="slotType" value="body" />
+	</item>
+	<item id="57561" article="a" name="Orange Kage Coat">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="body" />
+	
+	</item>
+	<item id="57562" article="a" name="Orange Kage Hats">
+		<attribute key="weight" value="1000" />
+		<attribute key="armor" value="100" />
+		<attribute key="slotType" value="head" />
+	
+	</item>
+	<item id="57563" article="a" name="Orange Kage Legs">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="legs" />
+	
+	</item>
+	<item id="57564" article="a" name="Orange Kage Boots">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="feet" />
+	
+	</item>
+	<item id="57565" article="a" name="Yiraja Armor">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="body" />
+	
+	</item>
+	<item id="57566" article="a" name="Yiraja Headband">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="head" />
+	
+	</item>
+	<item id="57567" article="a" name="Yiraja Boots">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="feet" />
+	
+	</item>
+	<item id="57568" article="a" name="Yiraja Legs">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="legs" />
+	
+	</item>
+	<item id="57569" article="a" name="Uchcia Obito Tunic">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="body" />
+	
+	</item>
+	<item id="57570" article="a" name="Obito Boots">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="feet" />
+	
+	</item>
+	<item id="57571" article="a" name="Special Anbu Legs">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="legs" />
+	</item>
+	<item id="57572" article="a" name="Konohamaru Armor">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="body" />
+	
+	</item>
+	<item id="57573" article="a" name="Konohamaru Legs">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="legs" />
+	
+	</item>
+	<item id="57574" article="a" name="Konohamaru GOOGLES">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="head" />
+	
+	</item>
+	<item id="57575" article="a" name="Santa Claus Armor">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="body" />
+	
+	</item>
+	<item id="57576" article="a" name="Santa Claus Legs">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="legs" />
+	
+	</item>
+	<item id="57577" article="a" name="Santa Claus Boots">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="feet" />
+	
+	</item>
+	<item id="57578" article="a" name="Hagormo Armor">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="body" />
+	
+	</item>
+	<item id="57579" article="a" name="Legendary Uzumaki Energy Headband">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="head" />
+	
+	</item>
+	<item id="57580" article="a" name="Legendary Uzumaki Energy Coat">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="body" />
+	
+	</item>
+	<item id="57581" article="a" name="Legendary Uzumaki Energy Legs">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="legs" />
+	
+	</item>
+	<item id="57582" article="a" name="Legendary Uzumaki Energy Boots">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="feet" />
+	
+	</item>
+
 </items>
