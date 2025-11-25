@@ -560,6 +560,7 @@ ShootTypeNames shootTypeNames = {
     {"stosiedem", CONST_ANI_STOSIEDEM},
     {"stoosiem", CONST_ANI_STOOSIEM},
     {"stodziewiec", CONST_ANI_STODZIEWIEC},
+    {"stodziesiec", CONST_ANI_STODZIESIEC},
 };
 
 CombatTypeNames combatTypeNames = {

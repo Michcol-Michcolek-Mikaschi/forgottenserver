@@ -635,4 +635,7 @@
 	<distance id="28415" breakchance="30" unproperly="1" level="120" /> <!-- Royal Star -->
 	<distance id="38557" action="removecount" unproperly="1" level="150" script="diamond_arrow.lua" /> <!-- Diamond Arrow -->
 	<distance id="38558" action="removecount" unproperly="1" level="150" /> <!-- Spectral Bolt -->
+	<distance id="57303" action="removecount" /> <!-- Senbon in Pack -->
+	<distance id="57307" action="removecount" />
+	<distance id="57311" action="removecount" />
 </weapons>

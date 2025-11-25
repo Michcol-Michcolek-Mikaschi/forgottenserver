@@ -285,6 +285,7 @@ enum ShootType_t : uint8_t
 	CONST_ANI_STOSIEDEM = 107,
 	CONST_ANI_STOOSIEM = 108,
 	CONST_ANI_STODZIEWIEC = 109,
+	CONST_ANI_STODZIESIEC = 110,
 
 	// for internal use, don't send to client
 	CONST_ANI_WEAPONTYPE = 0xFE, // 254
