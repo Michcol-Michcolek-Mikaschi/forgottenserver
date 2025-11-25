@@ -45438,5 +45438,659 @@
 		<attribute key="range" value="5" />
 
 	</item>
+	<item id="57428" article="a" name="Tobi White Mask">
+		<attribute key="weight" value="1000" />
+		<attribute key="armor" value="100" />
+		<attribute key="slotType" value="head" />
+	</item>
+	<item id="57429" article="a" name="Hirrashin Kunai">
+		<attribute key="weight" value="5000" />
+		<attribute key="defense" value="25" />
+		<attribute key="attack" value="30" />
+		<attribute key="weaponType" value="band" />
+		<attribute key="slotType" value="one-handed" />
 
+	</item>
+	<item id="57430" article="a" name="Tobi Orange Mask">
+		<attribute key="weight" value="1000" />
+		<attribute key="armor" value="100" />
+		<attribute key="slotType" value="head" />
+	</item>
+	<item id="57431" article="a" name="Electric Sword">
+		<attribute key="weight" value="6000" />
+		<attribute key="attack" value="35" />
+		<attribute key="defense" value="25" />
+		<attribute key="weaponType" value="sword" />
+		<attribute key="slotType" value="one-handed" />
+	</item>
+	<item id="57432" article="a" name="Tsunade's Necklace">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="15" />
+		<attribute key="slotType" value="necklace" />
+	</item>
+	<item id="57433" article="a" name="Gunbai Fan">
+		<attribute key="weight" value="2500" />
+		<attribute key="attack" value="95" />
+		<attribute key="weaponType" value="distance" />
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="shootType" value="szescdziesiatpiec" />
+		<attribute key="maxHitChance" value="85" />
+		<attribute key="range" value="5" />
+
+	</item>
+	<item id="57434" article="a" name="Hiddan amulet">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="15" />
+		<attribute key="slotType" value="necklace" />
+
+	</item>
+	<item id="57435" article="a" name="Master Sword">
+		<attribute key="weight" value="6000" />
+		<attribute key="attack" value="40" />
+		<attribute key="defense" value="30" />
+		<attribute key="weaponType" value="sword" />
+		<attribute key="slotType" value="one-handed" />
+
+	</item>
+	<item id="57436" article="a" name="Teen Tobi Mask">
+		<attribute key="weight" value="1000" />
+		<attribute key="armor" value="100" />
+		<attribute key="slotType" value="head" />
+	</item>
+	<item id="57437" article="a" name="Huyga Bluse">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="15" />
+		<attribute key="slotType" value="body" />
+	</item>
+	<item id="57438" article="a" name="Kage konoha Red Hat">
+		<attribute key="weight" value="1000" />
+		<attribute key="armor" value="100" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57439" article="a" name="Kisame Ring">
+		<attribute key="weight" value="6000" />
+		<attribute key="armor" value="25" />
+		<attribute key="slotType" value="ring" />
+	</item>
+	<item id="57440" article="a" name="Kisame Sword">
+		<attribute key="weight" value="7000" />
+		<attribute key="attack" value="40" />
+		<attribute key="defense" value="30" />
+		<attribute key="weaponType" value="sword" />
+		<attribute key="slotType" value="two-handed" />
+
+	</item>
+	<item id="57441" article="a" name="Bone Backpack">
+		<attribute key="weight" value="5000" />
+		<attribute key="defense" value="20" />
+		<attribute key="armor" value="15" />
+		<attribute key="slotType" value="backpack" />
+
+	</item>
+	<item id="57442" article="a" name="Akatsuki Dead Coat">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="body" />
+
+	</item>
+	<item id="57443" article="a" name="Legendary Fan">
+		<attribute key="weight" value="2500" />
+		<attribute key="attack" value="150" />
+		<attribute key="weaponType" value="distance" />
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="shootType" value="stopiec" />
+		<attribute key="maxHitChance" value="850" />
+		<attribute key="range" value="5" />
+
+	</item>
+	<item id="57444" article="a" name="Kuybi Chakra Boots">
+		<attribute key="weight" value="1000" />
+		<attribute key="armor" value="100" />
+		<attribute key="slotType" value="feet" />
+
+	</item>
+	<item id="57445" article="a" name="Kuybi Chakra Coat">
+		<attribute key="weight" value="1000" />
+		<attribute key="armor" value="100" />
+		<attribute key="slotType" value="body" />
+	</item>
+	<item id="57446" article="a" name="Kuybi Chakra Headband">
+		<attribute key="weight" value="1000" />
+		<attribute key="armor" value="100" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57447" article="a" name="Kuybi Chakra legs">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="legs" />
+
+	</item>
+	<item id="57448" article="a" name="Amulet Huyga">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="15" />
+		<attribute key="slotType" value="necklace" />
+	</item>
+	<item id="57449" article="a" name="Electric Big Shuriken">
+		<attribute key="weight" value="5000" />
+		<attribute key="defense" value="28" />
+		<attribute key="attack" value="32" />
+		<attribute key="weaponType" value="Sword" />
+		<attribute key="slotType" value="two-handed" />
+
+	</item>
+	<item id="57450" article="a" name="Naruto Chakra Coat">
+		<attribute key="weight" value="1000" />
+		<attribute key="armor" value="100" />
+		<attribute key="slotType" value="body" />	
+	</item>
+	<item id="57451" article="a" name="Ice Electric Big Shuriken">
+		<attribute key="weight" value="5000" />
+		<attribute key="defense" value="28" />
+		<attribute key="attack" value="32" />
+		<attribute key="weaponType" value="Sword" />
+		<attribute key="slotType" value="two-handed" />
+
+	</item>
+	<item id="57452" article="a" name="Naruto Chakra Headband">
+		<attribute key="weight" value="1000" />
+		<attribute key="armor" value="100" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57453" article="a" name="Naruto Chakra Legs">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="legs" />
+
+	</item>
+	<item id="57454" article="a" name="Naruto Chakra Boots">
+		<attribute key="weight" value="1000" />
+		<attribute key="armor" value="100" />
+		<attribute key="slotType" value="feet" />
+
+	</item>
+	<item id="57455" article="a" name="Big Black Boots">
+		<attribute key="weight" value="1000" />
+		<attribute key="armor" value="100" />
+		<attribute key="slotType" value="feet" />
+
+	</item>
+	<item id="57456" article="a" name="Hashiama Armor">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="body" />
+
+	</item>
+	<item id="57457" article="a" name="Hashiama Legs">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="legs" />
+
+	</item>
+	<item id="57458" article="a" name="Black Staff">
+		<attribute key="weight" value="7000" />
+		<attribute key="attack" value="40" />
+		<attribute key="defense" value="30" />
+		<attribute key="weaponType" value="sword" />
+		<attribute key="slotType" value="two-handed" />
+
+	</item>
+	<item id="57459" article="a" name="Green Present Box">
+		<attribute key="weight" value="1000" />
+	</item>
+	<item id="57460" article="a" name="Gold Electric Big Shuriken">
+		<attribute key="weight" value="5000" />
+		<attribute key="defense" value="28" />
+		<attribute key="attack" value="32" />
+		<attribute key="weaponType" value="Sword" />
+		<attribute key="slotType" value="two-handed" />
+	</item>
+	<item id="57461" article="a" name="Fire Electric Big Shuriken">
+		<attribute key="weight" value="5000" />
+		<attribute key="defense" value="28" />
+		<attribute key="attack" value="32" />
+		<attribute key="weaponType" value="Sword" />
+		<attribute key="slotType" value="two-handed" />
+
+	</item>
+	<item id="57462" article="a" name="Kakashi Mask">
+		<attribute key="weight" value="1000" />
+		<attribute key="armor" value="100" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57463" article="a" name="Orange Coat">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="body" />
+	</item>
+	<item id="57464" article="a" name="Strong Black Coat">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="body" />
+	</item>
+	<item id="57465" article="a" name="Rare Gunbai Fan">
+		<attribute key="weight" value="2500" />
+		<attribute key="attack" value="120" />
+		<attribute key="weaponType" value="distance" />
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="shootType" value="stopiec" />
+		<attribute key="maxHitChance" value="85" />
+		<attribute key="range" value="5" />
+
+	</item>
+	<item id="57466" article="a" name="Third Blade Scythe">
+		<attribute key="weight" value="7000" />
+		<attribute key="attack" value="45" />
+		<attribute key="defense" value="35" />
+		<attribute key="weaponType" value="sword" />
+		<attribute key="slotType" value="two-handed" />
+	</item>
+	<item id="57467" article="a" name="Item Name">
+		<attribute key="weight" value="7000" />
+	</item>
+	<item id="57468" article="a" name="Ice Big Shuriken">
+		<attribute key="weight" value="7000" />
+		<attribute key="attack" value="45" />
+		<attribute key="defense" value="35" />
+		<attribute key="weaponType" value="sword" />
+		<attribute key="slotType" value="two-handed" />
+	</item>
+	<item id="57469" article="a" name="White-Purple Coat">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="body" />
+	</item>
+	<item id="57470" article="a" name="Red Rare Coat">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="body" />
+	</item>
+	<item id="57471" article="a" name="Crystal Random Box">
+		<attribute key="weight" value="1000" />
+	</item>
+	<item id="57472" article="a" name="Normal Ring">
+		<attribute key="weight" value="6000" />
+		<attribute key="armor" value="15" />
+		<attribute key="slotType" value="ring" />
+	</item>
+	<item id="57473" article="a" name="Blue Big Present Box">
+		<attribute key="weight" value="1000" />
+	</item>
+	<item id="57474" article="a" name="BiG Green Scroll">
+		<attribute key="weight" value="1000" />
+	</item>
+	<item id="57475" article="a" name="Filter Possion Mask">
+		<attribute key="weight" value="1000" />
+		<attribute key="armor" value="100" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57476" article="a" name="Strong Shield">
+		<attribute key="weight" value="6000" />
+		<attribute key="defense" value="250" />
+		<attribute key="slotType" value="one-handed" />
+	</item>
+	<item id="57477" article="a" name="Strong Ring">
+		<attribute key="weight" value="6000" />
+		<attribute key="armor" value="25" />
+		<attribute key="slotType" value="ring" />
+	</item>
+	<item id="57478" article="a" name="Fire Sword">
+		<attribute key="weight" value="7000" />
+		<attribute key="attack" value="40" />
+		<attribute key="defense" value="30" />
+		<attribute key="weaponType" value="sword" />
+		<attribute key="slotType" value="two-handed" />
+
+	</item>
+	<item id="57479" article="a" name="Medal of Honor">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="15" />
+		<attribute key="slotType" value="necklace" />
+
+	</item>
+	<item id="57480" article="a" name="Green Staff">
+		<attribute key="weight" value="7000" />
+		<attribute key="attack" value="40" />
+		<attribute key="defense" value="30" />
+		<attribute key="weaponType" value="sword" />
+		<attribute key="slotType" value="two-handed" />
+
+	</item>
+	<item id="57481" article="a" name="Red Staff">
+		<attribute key="weight" value="7000" />
+		<attribute key="attack" value="40" />
+		<attribute key="defense" value="30" />
+		<attribute key="weaponType" value="sword" />
+		<attribute key="slotType" value="two-handed" />
+
+	</item>
+	<item id="57482" article="a" name="Black Strong Coat">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="body" />
+
+	</item>
+	<item id="57483" article="a" name="Quest Item">
+		<attribute key="weight" value="1500" />
+	</item>
+	<item id="57484" article="a" name="Golden Glovers">
+		<attribute key="weight" value="5000" />
+		<attribute key="defense" value="32" />
+		<attribute key="attack" value="36" />
+		<attribute key="weaponType" value="glover" />
+		<attribute key="slotType" value="one-handed" />
+	</item>
+	<item id="57485" article="a" name="Jonin Boots">
+		<attribute key="weight" value="1000" />
+		<attribute key="armor" value="100" />
+		<attribute key="slotType" value="feet" />
+	</item>
+	<item id="57486" article="a" name="Lee Bluse">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="body" />
+
+	</item>
+	<item id="57487" article="a" name="Granate Glovers">
+		<attribute key="weight" value="5000" />
+		<attribute key="defense" value="30" />
+		<attribute key="attack" value="34" />
+		<attribute key="weaponType" value="glover" />
+		<attribute key="slotType" value="one-handed" />
+
+	</item>
+	<item id="57488" article="a" name="Annonymous Mask">
+		<attribute key="weight" value="1000" />
+		<attribute key="armor" value="100" />
+		<attribute key="slotType" value="head" />
+	</item>
+	<item id="57489" article="a" name="Skull Backpack">
+		<attribute key="weight" value="5000" />
+		<attribute key="defense" value="20" />
+		<attribute key="armor" value="15" />
+		<attribute key="slotType" value="backpack" />
+	</item>
+	<item id="57490" article="a" name="Fire Glovers">
+		<attribute key="weight" value="5000" />
+		<attribute key="defense" value="28" />
+		<attribute key="attack" value="32" />
+		<attribute key="weaponType" value="glover" />
+		<attribute key="slotType" value="one-handed" />
+
+	</item>
+	<item id="57491" article="a" name="Skull Bone Mask">
+		<attribute key="weight" value="1000" />
+		<attribute key="armor" value="100" />
+		<attribute key="slotType" value="head" />
+	</item>
+	<item id="57492" article="a" name="Strong Skull Bone Mask">
+		<attribute key="weight" value="1000" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57493" article="a" name="Skull">
+		<attribute key="weight" value="1000" />
+
+	</item>
+	<item id="57494" article="a" name="Scare Face Mask">
+		<attribute key="weight" value="1000" />
+		<attribute key="armor" value="100" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57495" article="a" name="Rare Black - Purple Coat">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="body" />
+
+	</item>
+	<item id="57496" article="a" name="Rare White - Purple Coat">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="body" />
+
+	</item>
+	<item id="57497" article="a" name="Six Paths Sage Staff">
+		<attribute key="weight" value="7000" />
+		<attribute key="attack" value="50" />
+		<attribute key="defense" value="40" />
+		<attribute key="weaponType" value="sword" />
+		<attribute key="slotType" value="two-handed" />
+
+	</item>
+	<item id="57498" article="a" name="Silver Armor">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="body" />
+
+	</item>
+	<item id="57499" article="a" name="White Staff Rare ">
+		<attribute key="weight" value="7000" />
+		<attribute key="attack" value="40" />
+		<attribute key="defense" value="30" />
+		<attribute key="weaponType" value="sword" />
+		<attribute key="slotType" value="two-handed" />
+
+	</item>
+	<item id="57500" article="a" name="Naruto Kuyubi Chakra Legs">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="legs" />
+	</item>
+	<item id="57501" article="a" name="Naruto Kuyubi Chakra Gloves">
+		<attribute key="weight" value="5000" />
+		<attribute key="defense" value="32" />
+		<attribute key="attack" value="36" />
+		<attribute key="weaponType" value="glover" />
+		<attribute key="slotType" value="one-handed" />
+	</item>
+	<item id="57502" article="a" name="Naruto Kuyubi Chakra Boots">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="feet" />
+	</item>
+	<item id="57503" article="a" name="Naruto Kuyubi Chakra Coat">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="body" />
+	</item>
+	<item id="57504" article="a" name="Naruto Kuyubi Chakra Headband">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57505" article="a" name="Anbu Strong Tactical Offensive Mask">
+		<attribute key="weight" value="1000" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57506" article="a" name="Huyga Ring">
+		<attribute key="weight" value="6000" />
+		<attribute key="armor" value="25" />
+		<attribute key="slotType" value="ring" />
+
+	</item>
+	<item id="57507" article="a" name="Energy Coat">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="body" />
+
+	</item>
+	<item id="57508" article="a" name="Energy Boots">
+		<attribute key="weight" value="1000" />
+		<attribute key="armor" value="100" />
+		<attribute key="slotType" value="feet" />
+
+	</item>
+	<item id="57509" article="a" name="Energy Headband">
+		<attribute key="weight" value="1000" />
+		<attribute key="armor" value="100" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57510" article="a" name="Energy Legs">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="legs" />
+
+	</item>
+	<item id="57511" article="a" name="Chakra Coat">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="body" />
+
+	</item>
+	<item id="57512" article="a" name="Black Big Shuriken">
+		<attribute key="weight" value="7000" />
+		<attribute key="attack" value="45" />
+		<attribute key="defense" value="35" />
+		<attribute key="weaponType" value="sword" />
+		<attribute key="slotType" value="two-handed" />
+
+	</item>
+	<item id="57513" article="a" name="Kakuzu Mask">
+		<attribute key="weight" value="1000" />
+		<attribute key="armor" value="100" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57514" article="a" name="Purple Ring">
+		<attribute key="weight" value="6000" />
+		<attribute key="armor" value="25" />
+		<attribute key="slotType" value="ring" />
+
+	</item>
+	<item id="57515" article="a" name="Orochimaru Student Armor">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="body" />
+
+	</item>
+	<item id="57516" article="a" name="Stron Fire Sword">
+		<attribute key="weight" value="7000" />
+		<attribute key="attack" value="45" />
+		<attribute key="defense" value="35" />
+		<attribute key="weaponType" value="sword" />
+		<attribute key="slotType" value="two-handed" />
+
+	</item>
+	<item id="57517" article="a" name="Huyuga Box">
+		<attribute key="weight" value="5000" />
+	</item>
+	<item id="57518" article="a" name="Black Amulet">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="15" />
+		<attribute key="slotType" value="necklace" />
+
+	</item>
+	<item id="57519" article="a" name="Red Staff">
+		<attribute key="weight" value="7000" />
+		<attribute key="attack" value="40" />
+		<attribute key="defense" value="30" />
+		<attribute key="weaponType" value="sword" />
+		<attribute key="slotType" value="two-handed" />
+
+	</item>
+	<item id="57520" article="a" name="Six Paths Sage Coat">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="body" />
+
+	</item>
+	<item id="57521" article="a" name="Red Ring">
+		<attribute key="weight" value="6000" />
+		<attribute key="armor" value="25" />
+		<attribute key="slotType" value="ring" />
+
+	</item>
+	<item id="57522" article="a" name="Student Konoha Boots">
+		<attribute key="weight" value="1000" />
+		<attribute key="armor" value="100" />
+		<attribute key="slotType" value="feet" />
+
+	</item>
+	<item id="57523" article="a" name="Sasuke Uchiha Legs">
+		<attribute key="weight" value="7000" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="legs" />
+	</item>
+	<item id="57524" article="a" name="Legendary Coat">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="body" />
+
+	</item>
+	<item id="57525" article="a" name="Legendary Tobi Mask">
+		<attribute key="weight" value="1000" />
+		<attribute key="armor" value="100" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57526" article="a" name="Legendary Gunbai Fan">
+		<attribute key="weight" value="2500" />
+		<attribute key="attack" value="200" />
+		<attribute key="weaponType" value="distance" />
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="shootType" value="stopiec" />
+		<attribute key="maxHitChance" value="85" />
+		<attribute key="range" value="5" />
+
+	</item>
+	<item id="57527" article="a" name="Chest">
+		<attribute key="weight" value="1000" />
+	</item>
+	<item id="57528" article="a" name="Antidote">
+		<attribute key="weight" value="1000" />
+	</item>
+	<item id="57529" article="a" name="Legendary Gloves">
+		<attribute key="weight" value="5000" />
+		<attribute key="defense" value="35" />
+		<attribute key="attack" value="40" />
+		<attribute key="weaponType" value="glover" />
+		<attribute key="slotType" value="one-handed" />
+
+	</item>
+	<item id="57530" article="a" name="Kaguya Otsutsuki Robe">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="body" />
+
+	</item>
+	<item id="57531" article="a" name="Kaguya Otsutsuki Headband">
+		<attribute key="weight" value="1000" />
+		<attribute key="armor" value="100" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57532" article="a" name="Kage Naruto Boots">
+		<attribute key="weight" value="1000" />
+		<attribute key="armor" value="100" />
+		<attribute key="slotType" value="feet" />
+
+	</item>
+	<item id="57533" article="a" name="Kage Naruto Headband">
+		<attribute key="weight" value="1000" />
+		<attribute key="armor" value="100" />
+		<attribute key="slotType" value="head" />
+
+	</item>
+	<item id="57534" article="a" name="Kage Naruto Coat">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="body" />
+
+	</item>
+	<item id="57535" article="a" name="Kage Naruto Legs">
+		<attribute key="weight" value="1500" />
+		<attribute key="armor" value="150" />
+		<attribute key="slotType" value="legs" />
+
+	</item>
 </items>
