@@ -18,7 +18,7 @@ enum MagicEffectsType_t : uint8_t
 	MAGIC_EFFECTS_CREATE_DISTANCEEFFECT_REVERSED = 5, // needs uint8_t and deltaX(int8_t), deltaY(int8_t) after type
 };
 
-enum MagicEffectClasses : uint8_t
+enum MagicEffectClasses : uint16_t
 {
 	CONST_ME_NONE,
 
