@@ -9,6 +9,18 @@ if not GlobalStorage then
 end
 GlobalStorage.GameShopRefreshCount = 89412
 
+-- Storage keys for aura effects
+local STORAGE_OWNED_AURAS = 89500  -- Bitmask of owned auras
+local STORAGE_ACTIVE_AURA = 89501  -- Currently active aura ID (0 = none)
+local STORAGE_VIP_DAYS = 89600     -- VIP days remaining (shared with vip_system.lua)
+
+-- Aura effect definitions (effectId, name, price, description)
+local AURA_EFFECTS = {
+	{effectId = 301, name = "Fire Aura", price = 50, description = "A blazing fire aura surrounds your character.\n\n- permanent visual effect\n- can be toggled on/off anytime\n- once purchased, yours forever"},
+	{effectId = 302, name = "Ice Aura", price = 50, description = "A freezing ice aura surrounds your character.\n\n- permanent visual effect\n- can be toggled on/off anytime\n- once purchased, yours forever"},
+	{effectId = 303, name = "Lightning Aura", price = 75, description = "Electric sparks crackle around your character.\n\n- permanent visual effect\n- can be toggled on/off anytime\n- once purchased, yours forever"}
+}
+
 local pointsCache = {}
 local secondPointsCache = {}
 local shopInitialized = false
@@ -36,6 +48,14 @@ function LoginEvent.onLogin(player)
 		}
 	end
 	
+	-- Send aura data on login (delayed to ensure protocol is ready)
+	addEvent(function(playerId)
+		local p = Player(playerId)
+		if p then
+			sendPlayerAuraData(p)
+		end
+	end, 1000, player:getId())
+	
 	return true
 end
 
@@ -46,6 +66,7 @@ local CATEGORY_PET = 3             -- Kuchiyose [PET]
 local CATEGORY_PREMIUM = 4         -- Premium Account
 local CATEGORY_BOOST = 5           -- Boost
 local CATEGORY_OTHER = 6           -- Other
+local CATEGORY_AURA = 7            -- Aura Effects
 
 -- Icon mapping for categories
 local categoryIcons = {
@@ -54,7 +75,8 @@ local categoryIcons = {
 	[3] = 6,   -- Pet (Item category to show images) (CATEGORY_ITEM = 1)
 	[4] = 20,  -- Premium Account (CATEGORY_PREMIUM = 0)
 	[5] = 17,  -- Boost (CATEGORY_EXTRAS = 5)
-	[6] = 9    -- Other (Extras) (CATEGORY_EXTRAS = 5)
+	[6] = 9,   -- Other (Extras) (CATEGORY_EXTRAS = 5)
+	[7] = 17   -- Aura Effects (CATEGORY_EXTRAS = 5)
 }
 
 -- Explicit metadata for offers that need fixed server/client sprite ids
@@ -118,6 +140,14 @@ function gameShopInitialize()
 			addCategory(nil, catName, iconId, catId, "")
 		until not result.next(categoriesQuery)
 		result.free(categoriesQuery)
+	end
+	
+	-- Add Aura Effects category
+	addCategory(nil, "Aura Effects", categoryIcons[CATEGORY_AURA], CATEGORY_AURA, "Permanent visual effects for your character")
+	
+	-- Add aura offers
+	for _, aura in ipairs(AURA_EFFECTS) do
+		addItem("Aura Effects", aura.name, aura.effectId, aura.price, false, 1, aura.description, "aura", nil)
 	end
 	
 	-- Load offers from MyAAC Gesior Shop database
@@ -324,6 +354,10 @@ function finalizePurchase(player, offer)
 		return defaultChangeNameCallback(player, offer)
 	elseif offerType == "changesex" then
 		return defaultChangeSexCallback(player)
+	elseif offerType == "aura" then
+		return defaultAuraCallback(player, offer)
+	elseif offerType == "vip" then
+		return defaultVipCallback(player, offer)
 	else
 		-- Default to item
 		return defaultItemCallback(player, offer)
@@ -332,8 +366,116 @@ function finalizePurchase(player, offer)
 	return "Something went wrong, try again or contact server admin [#2]!"
 end
 
+-- Aura purchase callback
+function defaultAuraCallback(player, offer)
+	local effectId = offer.serverId
+	if not effectId or type(effectId) ~= "number" then
+		return "Invalid aura effect."
+	end
+	
+	-- Check if player already owns this aura
+	local ownedAuras = player:getStorageValue(STORAGE_OWNED_AURAS)
+	if ownedAuras < 0 then
+		ownedAuras = 0
+	end
+	
+	-- Calculate bit position (effectId 301 = bit 0, 302 = bit 1, etc.)
+	local bitPos = effectId - 301
+	local auraBit = bit.lshift(1, bitPos)
+	
+	if bit.band(ownedAuras, auraBit) ~= 0 then
+		return "You already own this aura effect."
+	end
+	
+	-- Add aura to owned list
+	ownedAuras = bit.bor(ownedAuras, auraBit)
+	player:setStorageValue(STORAGE_OWNED_AURAS, ownedAuras)
+	
+	-- Notify client about new owned aura
+	sendPlayerAuraData(player)
+	
+	return false
+end
+
+-- Send aura data to client
+function sendPlayerAuraData(player)
+	local ownedAuras = player:getStorageValue(STORAGE_OWNED_AURAS)
+	if ownedAuras < 0 then
+		ownedAuras = 0
+	end
+	
+	local activeAura = player:getStorageValue(STORAGE_ACTIVE_AURA)
+	if activeAura < 0 then
+		activeAura = 0
+	end
+	
+	-- Build list of owned aura IDs
+	local ownedList = {}
+	for _, aura in ipairs(AURA_EFFECTS) do
+		local bitPos = aura.effectId - 301
+		local auraBit = bit.lshift(1, bitPos)
+		if bit.band(ownedAuras, auraBit) ~= 0 then
+			table.insert(ownedList, aura.effectId)
+		end
+	end
+	
+	player:sendExtendedOpcode(ExtendedOPCodes.CODE_GAMESHOP, json.encode({
+		action = "auraData",
+		data = {
+			owned = ownedList,
+			active = activeAura
+		}
+	}))
+end
+
+-- Activate/deactivate aura
+function setPlayerAura(player, effectId)
+	local ownedAuras = player:getStorageValue(STORAGE_OWNED_AURAS)
+	if ownedAuras < 0 then
+		ownedAuras = 0
+	end
+	
+	-- If effectId is 0, deactivate aura
+	if effectId == 0 then
+		player:setStorageValue(STORAGE_ACTIVE_AURA, 0)
+		sendPlayerAuraData(player)
+		return true
+	end
+	
+	-- Check if player owns this aura
+	local bitPos = effectId - 301
+	local auraBit = bit.lshift(1, bitPos)
+	
+	if bit.band(ownedAuras, auraBit) == 0 then
+		return false -- Player doesn't own this aura
+	end
+	
+	player:setStorageValue(STORAGE_ACTIVE_AURA, effectId)
+	sendPlayerAuraData(player)
+	return true
+end
+
 function defaultPremiumCallback(player, offer)
 	player:addPremiumDays(offer.count)
+	return false
+end
+
+-- VIP Status purchase callback
+function defaultVipCallback(player, offer)
+	local vipDays = offer.count
+	if not vipDays or vipDays <= 0 then
+		return "Invalid VIP duration."
+	end
+	
+	-- Add VIP days to player
+	local currentVipDays = player:getStorageValue(STORAGE_VIP_DAYS)
+	if currentVipDays < 0 then
+		currentVipDays = 0
+	end
+	
+	player:setStorageValue(STORAGE_VIP_DAYS, currentVipDays + vipDays)
+	player:sendTextMessage(MESSAGE_INFO_DESCR, "You have received " .. vipDays .. " days of VIP Status! Total: " .. (currentVipDays + vipDays) .. " days remaining.")
+	
 	return false
 end
 
@@ -486,6 +628,19 @@ function ExtendedEvent.onExtendedOpcode(player, opcode, buffer)
 			gameShopGetDescription(player, data)
 		elseif action == "purchase" then
 			gameShopPurchase(player, data)
+		elseif action == "getAuraData" then
+			sendPlayerAuraData(player)
+		elseif action == "setAura" then
+			local effectId = data.effectId or 0
+			if setPlayerAura(player, effectId) then
+				if effectId > 0 then
+					infoMsg(player, "Aura effect activated!")
+				else
+					infoMsg(player, "Aura effect deactivated.")
+				end
+			else
+				errorMsg(player, "You don't own this aura effect.")
+			end
 		end
 	end
 end
@@ -514,6 +669,7 @@ end
 function gameShopFetch(player)
 	gameShopUpdatePoints(player)
 	gameShopUpdateHistory(player)
+	sendPlayerAuraData(player)
 
 	player:sendExtendedOpcode(ExtendedOPCodes.CODE_GAMESHOP, json.encode({action = "fetchBase", data = {categories = GAME_SHOP.categories, url = DONATION_URL}}))
 
@@ -522,7 +678,7 @@ function gameShopFetch(player)
 		for _, offer in ipairs(offersTable) do
 			local offerCopy = {}
 			for k, v in pairs(offer) do
-				if k ~= "description" and k ~= "offerType" then
+				if k ~= "description" then
 					offerCopy[k] = v
 				end
 			end
