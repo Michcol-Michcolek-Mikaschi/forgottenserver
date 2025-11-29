@@ -5,13 +5,21 @@ local GAME_SHOP = nil
 local SECOND_CURRENCY_ENABLED = false
 
 if not GlobalStorage then
-    GlobalStorage = {}
+	GlobalStorage = {}
 end
 GlobalStorage.GameShopRefreshCount = 89412
 
 local pointsCache = {}
 local secondPointsCache = {}
 local shopInitialized = false
+
+-- Aura System Storage Keys
+local STORAGE_EQUIPPED_AURA = 65000
+local AURA_EFFECTS = {
+	[301] = { name = "Fire Aura", price = 50, description = "A blazing fire aura surrounds your character.\n\n- permanent visual effect\n- can be toggled on/off anytime\n- once purchased, yours forever" },
+	[302] = { name = "Ice Aura", price = 50, description = "A freezing ice aura surrounds your character.\n\n- permanent visual effect\n- can be toggled on/off anytime\n- once purchased, yours forever" },
+	[303] = { name = "Lightning Aura", price = 75, description = "A crackling lightning aura surrounds your character.\n\n- permanent visual effect\n- can be toggled on/off anytime\n- once purchased, yours forever" }
+}
 
 local LoginEvent = CreatureEvent("GameShopLogin")
 
@@ -36,16 +44,40 @@ function LoginEvent.onLogin(player)
 		}
 	end
 	
+	-- Restore equipped aura on login
+	local equippedAura = player:getStorageValue(STORAGE_EQUIPPED_AURA)
+	if equippedAura and equippedAura > 0 and AURA_EFFECTS[equippedAura] then
+		addEvent(function(playerId, auraId)
+			local p = Player(playerId)
+			if p then
+				p:sendExtendedOpcode(ExtendedOPCodes.CODE_GAMESHOP, json.encode({
+					action = "equipAura",
+					data = { auraId = auraId }
+				}))
+			end
+		end, 1000, player:getId(), equippedAura)
+	end
+	
 	return true
 end
 
 -- Category mapping from Gesior Shop to OTClient
-local CATEGORY_ITEMS = 1          -- Items
-local CATEGORY_VIP_STATUS = 2     -- Vip Status
-local CATEGORY_PET = 3             -- Kuchiyose [PET]
-local CATEGORY_PREMIUM = 4         -- Premium Account
-local CATEGORY_BOOST = 5           -- Boost
-local CATEGORY_OTHER = 6           -- Other
+local CATEGORY_ITEMS = 1          -- Items (DB category id)
+local CATEGORY_VIP_STATUS = 2     -- Vip Status (DB category id)
+local CATEGORY_PET = 3            -- Kuchiyose [PET] (DB category id)
+local CATEGORY_PREMIUM = 4        -- Premium Account (DB category id)
+local CATEGORY_BOOST = 5          -- Boost (DB category id)
+local CATEGORY_OTHER = 6          -- Other (DB category id)
+local CATEGORY_AURA = 7           -- Aura Effects (DB category id)
+
+-- OTClient category identifiers (must mirror modules/game_shop/game_shop.lua)
+local CLIENT_CATEGORY_PREMIUM = 0
+local CLIENT_CATEGORY_ITEM = 1
+local CLIENT_CATEGORY_BLESSING = 2
+local CLIENT_CATEGORY_OUTFIT = 3
+local CLIENT_CATEGORY_MOUNT = 4
+local CLIENT_CATEGORY_EXTRAS = 5
+local CLIENT_CATEGORY_AURA = 6
 
 -- Icon mapping for categories
 local categoryIcons = {
@@ -54,7 +86,23 @@ local categoryIcons = {
 	[3] = 6,   -- Pet (Item category to show images) (CATEGORY_ITEM = 1)
 	[4] = 20,  -- Premium Account (CATEGORY_PREMIUM = 0)
 	[5] = 17,  -- Boost (CATEGORY_EXTRAS = 5)
-	[6] = 9    -- Other (Extras) (CATEGORY_EXTRAS = 5)
+	[6] = 9,   -- Other (Extras) (CATEGORY_EXTRAS = 5)
+	[7] = 18   -- Aura Effects (CATEGORY_AURA = 6)
+}
+
+-- Map Gesior categories to OTClient display categories
+local categoryClientTypes = {
+	[CATEGORY_ITEMS] = CLIENT_CATEGORY_ITEM,
+	[CATEGORY_VIP_STATUS] = CLIENT_CATEGORY_OUTFIT,
+	[CATEGORY_PET] = CLIENT_CATEGORY_ITEM,
+	[CATEGORY_PREMIUM] = CLIENT_CATEGORY_PREMIUM,
+	[CATEGORY_BOOST] = CLIENT_CATEGORY_EXTRAS,
+	[CATEGORY_OTHER] = CLIENT_CATEGORY_EXTRAS,
+	[CATEGORY_AURA] = CLIENT_CATEGORY_AURA
+}
+
+local categoryImageOverrides = {
+	[CATEGORY_VIP_STATUS] = "VIP"
 }
 
 -- Explicit metadata for offers that need fixed server/client sprite ids
@@ -104,6 +152,7 @@ function gameShopInitialize()
 	GAME_SHOP = {
 		categories = {},
 		categoriesId = {},
+		categoriesDbId = {},
 		offers = {}
 	}
 	
@@ -200,11 +249,42 @@ function gameShopInitialize()
 		result.free(offersQuery)
 	end
 	
+	-- Add Aura Effects category (hardcoded, not from database)
+	addCategory(nil, "Aura Effects", categoryIcons[CATEGORY_AURA] or 18, CATEGORY_AURA, "")
+	
+	-- Initialize aura offers table
+	if not GAME_SHOP.offers["Aura Effects"] then
+		GAME_SHOP.offers["Aura Effects"] = {}
+	end
+	
+	-- Add aura offers
+	for auraId, auraData in pairs(AURA_EFFECTS) do
+		table.insert(GAME_SHOP.offers["Aura Effects"], {
+			parent = "Aura Effects",
+			name = auraData.name,
+			serverId = auraId,
+			id = auraId,
+			clientId = nil,
+			image = nil,
+			price = auraData.price,
+			isSecondPrice = false,
+			count = 1,
+			description = auraData.description,
+			categoryId = CLIENT_CATEGORY_AURA,
+			offerType = "aura",
+			auraId = auraId
+		})
+	end
+	
+	-- Sort aura offers by ID
+	table.sort(GAME_SHOP.offers["Aura Effects"], function(a, b) return a.auraId < b.auraId end)
+	
 	shopInitialized = true
 end
 
 function addCategory(parent, title, iconId, categoryId, description)
-	GAME_SHOP.categoriesId[title] = categoryId
+	GAME_SHOP.categoriesId[title] = categoryClientTypes[categoryId] or CLIENT_CATEGORY_ITEM
+	GAME_SHOP.categoriesDbId[title] = categoryId
 	table.insert(GAME_SHOP.categories, {
 		title = title,
 		parent = parent,
@@ -221,6 +301,7 @@ function addItem(parent, name, serverId, price, isSecondPrice, count, descriptio
 
 	local displayImage = nil
 	local displayId = clientId or serverId
+	local dbCategoryId = GAME_SHOP.categoriesDbId[parent]
 
 	if not clientId then
 		if NAME_TO_IMAGE[name] then
@@ -230,6 +311,10 @@ function addItem(parent, name, serverId, price, isSecondPrice, count, descriptio
 			-- Legacy behaviour where ID already contains the image name
 			displayImage = tostring(serverId)
 		end
+	end
+
+	if categoryImageOverrides[dbCategoryId] then
+		displayImage = categoryImageOverrides[dbCategoryId]
 	end
 
 	table.insert(GAME_SHOP.offers[parent], {
@@ -486,6 +571,14 @@ function ExtendedEvent.onExtendedOpcode(player, opcode, buffer)
 			gameShopGetDescription(player, data)
 		elseif action == "purchase" then
 			gameShopPurchase(player, data)
+		elseif action == "fetchAuras" then
+			gameShopFetchAuras(player)
+		elseif action == "equipAura" then
+			gameShopEquipAura(player, data)
+		elseif action == "unequipAura" then
+			gameShopUnequipAura(player)
+		elseif action == "purchaseAura" then
+			gameShopPurchaseAura(player, data)
 		end
 	end
 end
@@ -514,6 +607,7 @@ end
 function gameShopFetch(player)
 	gameShopUpdatePoints(player)
 	gameShopUpdateHistory(player)
+	gameShopFetchAuras(player)
 
 	player:sendExtendedOpcode(ExtendedOPCodes.CODE_GAMESHOP, json.encode({action = "fetchBase", data = {categories = GAME_SHOP.categories, url = DONATION_URL}}))
 
@@ -530,6 +624,165 @@ function gameShopFetch(player)
 		end
 		player:sendExtendedOpcode(ExtendedOPCodes.CODE_GAMESHOP, json.encode({action = "fetchOffers", data = {category = category, offers = offersWithoutDesc}}))
 	end
+end
+
+-- ==================== AURA SYSTEM FUNCTIONS ====================
+
+function getPlayerOwnedAuras(player)
+	local ownedAuras = {}
+	local playerId = player:getGuid()
+	
+	local resultId = db.storeQuery("SELECT `aura_id` FROM `player_auras` WHERE `player_id` = " .. playerId)
+	if resultId ~= false then
+		repeat
+			local auraId = result.getNumber(resultId, "aura_id")
+			table.insert(ownedAuras, auraId)
+		until not result.next(resultId)
+		result.free(resultId)
+	end
+	
+	return ownedAuras
+end
+
+function playerOwnsAura(player, auraId)
+	local playerId = player:getGuid()
+	local resultId = db.storeQuery("SELECT `id` FROM `player_auras` WHERE `player_id` = " .. playerId .. " AND `aura_id` = " .. auraId)
+	if resultId ~= false then
+		result.free(resultId)
+		return true
+	end
+	return false
+end
+
+function gameShopFetchAuras(player)
+	local ownedAuras = getPlayerOwnedAuras(player)
+	local equippedAura = player:getStorageValue(STORAGE_EQUIPPED_AURA)
+	if equippedAura < 0 then
+		equippedAura = 0
+	end
+	
+	local auraList = {}
+	for auraId, auraData in pairs(AURA_EFFECTS) do
+		local owned = false
+		for _, ownedId in ipairs(ownedAuras) do
+			if ownedId == auraId then
+				owned = true
+				break
+			end
+		end
+		
+		table.insert(auraList, {
+			id = auraId,
+			name = auraData.name,
+			price = auraData.price,
+			image = auraData.image,
+			description = auraData.description,
+			owned = owned
+		})
+	end
+	
+	-- Sort by ID
+	table.sort(auraList, function(a, b) return a.id < b.id end)
+	
+	player:sendExtendedOpcode(ExtendedOPCodes.CODE_GAMESHOP, json.encode({
+		action = "fetchAuras",
+		data = {
+			auras = auraList,
+			equippedAura = equippedAura,
+			ownedCount = #ownedAuras,
+			totalCount = 3
+		}
+	}))
+end
+
+function gameShopPurchaseAura(player, data)
+	local auraId = tonumber(data.auraId)
+	if not auraId or not AURA_EFFECTS[auraId] then
+		return errorMsg(player, "Invalid aura!")
+	end
+	
+	if playerOwnsAura(player, auraId) then
+		return errorMsg(player, "You already own this aura!")
+	end
+	
+	local auraData = AURA_EFFECTS[auraId]
+	local points = getPoints(player)
+	
+	if auraData.price > points then
+		return errorMsg(player, "You don't have enough points!")
+	end
+	
+	local accountId = player:getAccountId()
+	local playerId = player:getGuid()
+	
+	-- Deduct points
+	db.query("UPDATE `accounts` SET `premium_points` = `premium_points` - " .. auraData.price .. " WHERE `id` = " .. accountId)
+	
+	if pointsCache[accountId] then
+		pointsCache[accountId].points = pointsCache[accountId].points - auraData.price
+		pointsCache[accountId].time = os.time()
+	end
+	
+	-- Add aura to player
+	db.query("INSERT INTO `player_auras` (`player_id`, `aura_id`) VALUES (" .. playerId .. ", " .. auraId .. ")")
+	
+	-- Insert into z_shop_history (Gesior Shop System structure)
+	-- Structure: id, comunication_id, to_name, to_account, from_nick, from_account, price, offer_id, trans_state, trans_start, trans_real, is_pacc
+	local historyData = {
+		"INSERT INTO `z_shop_history` VALUES (NULL, 0, ",
+		db.escapeString(player:getName()),
+		", ",
+		tostring(accountId), 
+		", 'Shop', 0, ",
+		tostring(auraData.price),
+		", 0, 'realized', ",
+		tostring(os.time()),
+		", ",
+		tostring(os.time()),
+		", 0)"
+	}
+	
+	db.asyncQuery(table.concat(historyData))
+	
+	-- Update player data
+	gameShopUpdatePoints(player)
+	gameShopFetchAuras(player)
+	
+	return infoMsg(player, "You've purchased " .. auraData.name .. "!", false)
+end
+
+function gameShopEquipAura(player, data)
+	local auraId = tonumber(data.auraId)
+	if not auraId or not AURA_EFFECTS[auraId] then
+		return errorMsg(player, "Invalid aura!")
+	end
+	
+	if not playerOwnsAura(player, auraId) then
+		return errorMsg(player, "You don't own this aura!")
+	end
+	
+	-- Store equipped aura
+	player:setStorageValue(STORAGE_EQUIPPED_AURA, auraId)
+	
+	-- Send equip command to client
+	player:sendExtendedOpcode(ExtendedOPCodes.CODE_GAMESHOP, json.encode({
+		action = "equipAura",
+		data = { auraId = auraId }
+	}))
+	
+	gameShopFetchAuras(player)
+end
+
+function gameShopUnequipAura(player)
+	player:setStorageValue(STORAGE_EQUIPPED_AURA, 0)
+	
+	-- Send unequip command to client
+	player:sendExtendedOpcode(ExtendedOPCodes.CODE_GAMESHOP, json.encode({
+		action = "unequipAura",
+		data = {}
+	}))
+	
+	gameShopFetchAuras(player)
 end
 
 function gameShopUpdatePoints(player)

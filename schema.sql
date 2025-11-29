@@ -398,6 +398,15 @@ INSERT INTO `server_config` (`config`, `value`) VALUES ('db_version', '37'), ('p
 DROP TRIGGER IF EXISTS `ondelete_players`;
 DROP TRIGGER IF EXISTS `oncreate_guilds`;
 
+CREATE TABLE IF NOT EXISTS `player_auras` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `player_id` int NOT NULL,
+  `aura_id` int NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `player_aura` (`player_id`, `aura_id`),
+  CONSTRAINT `player_auras_players_fk` FOREIGN KEY (`player_id`) REFERENCES `players` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARACTER SET=utf8;
+
 DELIMITER //
 CREATE TRIGGER `ondelete_players` BEFORE DELETE ON `players`
  FOR EACH ROW BEGIN
