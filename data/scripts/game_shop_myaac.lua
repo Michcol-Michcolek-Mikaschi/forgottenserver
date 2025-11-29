@@ -28,7 +28,8 @@ local shopInitialized = false
 local LoginEvent = CreatureEvent("GameShopLogin")
 
 local ExtendedOPCodes = {
-	CODE_GAMESHOP = 201
+	CODE_GAMESHOP = 201,
+	CODE_VIP = 202
 }
 
 function LoginEvent.onLogin(player)
@@ -48,13 +49,18 @@ function LoginEvent.onLogin(player)
 		}
 	end
 	
-	-- Send aura data on login (delayed to ensure protocol is ready)
+	-- Send aura data and VIP list on login (delayed to ensure protocol is ready)
 	addEvent(function(playerId)
 		local p = Player(playerId)
 		if p then
 			sendPlayerAuraData(p)
+			sendVipListToPlayer(p)
+			-- If this player is VIP, broadcast to everyone
+			if p:isVip() then
+				broadcastVipStatus()
+			end
 		end
-	end, 1000, player:getId())
+	end, 1500, player:getId())
 	
 	return true
 end
@@ -244,6 +250,8 @@ function gameShopInitialize()
 					serverId = "Name_Change"
 				elseif offerType == "changesex" then
 					serverId = "Sex_Change"
+				elseif offerType == "vip" then
+					serverId = "VIP"
 				end
 				
 				addItem(categoryName, offerName, serverId, points, false, count, description, offerType, clientId)
@@ -501,7 +509,7 @@ end
 
 -- VIP Status purchase callback
 function defaultVipCallback(player, offer)
-	local vipDays = offer.count
+	local vipDays = math.floor(offer.count)  -- Ensure integer days
 	if not vipDays or vipDays <= 0 then
 		return "Invalid VIP duration."
 	end
@@ -512,8 +520,14 @@ function defaultVipCallback(player, offer)
 		currentVipDays = 0
 	end
 	
-	player:setStorageValue(STORAGE_VIP_DAYS, currentVipDays + vipDays)
-	player:sendTextMessage(MESSAGE_INFO_DESCR, "You have received " .. vipDays .. " days of VIP Status! Total: " .. (currentVipDays + vipDays) .. " days remaining.")
+	local newVipDays = math.floor(currentVipDays + vipDays)
+	player:setStorageValue(STORAGE_VIP_DAYS, newVipDays)
+	player:sendTextMessage(MESSAGE_INFO_DESCR, "You have received " .. vipDays .. " days of VIP Status! Total: " .. newVipDays .. " days remaining.")
+	
+	-- Broadcast VIP status change to all players for name color update
+	if broadcastVipStatus then
+		broadcastVipStatus()
+	end
 	
 	return false
 end
@@ -695,6 +709,55 @@ function ExtendedEvent.onExtendedOpcode(player, opcode, buffer)
 				errorMsg(player, "You don't own this aura effect.")
 			end
 		end
+	elseif opcode == ExtendedOPCodes.CODE_VIP then
+		local status, json_data = pcall(function() return json.decode(buffer) end)
+		if not status then
+			return
+		end
+		
+		local action = json_data.action
+		local data = json_data.data
+		
+		if action == "getVipList" then
+			sendVipListToPlayer(player)
+		end
+	end
+end
+
+-- VIP System Functions
+function sendVipListToPlayer(player)
+	local vipPlayers = {}
+	for _, p in ipairs(Game.getPlayers()) do
+		if p:isVip() then
+			table.insert(vipPlayers, p:getName())
+		end
+	end
+	
+	print("[VIP System] Sending VIP list to " .. player:getName() .. " with " .. #vipPlayers .. " VIP players")
+	
+	player:sendExtendedOpcode(ExtendedOPCodes.CODE_VIP, json.encode({
+		action = "vipList",
+		data = { players = vipPlayers }
+	}))
+end
+
+function broadcastVipStatus()
+	local vipPlayers = {}
+	for _, player in ipairs(Game.getPlayers()) do
+		if player:isVip() then
+			table.insert(vipPlayers, player:getName())
+		end
+	end
+	
+	print("[VIP System] Broadcasting VIP list to all players with " .. #vipPlayers .. " VIP players")
+	
+	local data = json.encode({
+		action = "vipList",
+		data = { players = vipPlayers }
+	})
+	
+	for _, player in ipairs(Game.getPlayers()) do
+		player:sendExtendedOpcode(ExtendedOPCodes.CODE_VIP, data)
 	end
 end
 

@@ -17,18 +17,19 @@ function Player:getVipDays()
     if vipDays < 0 then
         return 0
     end
-    return vipDays
+    return math.floor(vipDays)  -- Ensure integer
 end
 
 -- Add VIP days to player
 function Player:addVipDays(days)
     local currentDays = self:getVipDays()
-    self:setStorageValue(STORAGE_VIP_DAYS, currentDays + days)
+    local newDays = math.floor(currentDays + days)  -- Ensure integer
+    self:setStorageValue(STORAGE_VIP_DAYS, newDays)
     
     -- Send message to player
-    self:sendTextMessage(MESSAGE_INFO_DESCR, "You have received " .. days .. " days of VIP Status! Total: " .. (currentDays + days) .. " days remaining.")
+    self:sendTextMessage(MESSAGE_INFO_DESCR, "You have received " .. math.floor(days) .. " days of VIP Status! Total: " .. newDays .. " days remaining.")
     
-    -- Broadcast VIP status to all players
+    -- Broadcast VIP status to all players for name color
     if broadcastVipStatus then
         broadcastVipStatus()
     end
@@ -40,12 +41,17 @@ end
 function Player:decreaseVipDays()
     local currentDays = self:getVipDays()
     if currentDays > 0 then
-        self:setStorageValue(STORAGE_VIP_DAYS, currentDays - 1)
+        local newDays = currentDays - 1
+        self:setStorageValue(STORAGE_VIP_DAYS, newDays)
         
-        if currentDays - 1 <= 0 then
+        if newDays <= 0 then
             self:sendTextMessage(MESSAGE_INFO_DESCR, "Your VIP Status has expired!")
-        elseif currentDays - 1 <= 3 then
-            self:sendTextMessage(MESSAGE_INFO_DESCR, "Warning: Your VIP Status will expire in " .. (currentDays - 1) .. " days!")
+            -- Broadcast to update name colors
+            if broadcastVipStatus then
+                broadcastVipStatus()
+            end
+        elseif newDays <= 3 then
+            self:sendTextMessage(MESSAGE_INFO_DESCR, "Warning: Your VIP Status will expire in " .. newDays .. " days!")
         end
     end
 end
@@ -64,64 +70,6 @@ function VipLoginEvent.onLogin(player)
 end
 
 VipLoginEvent:register()
-
--- Extended Opcode for VIP system
-local VIP_OPCODE = 202
-
--- Send VIP status to all players when someone logs in or VIP status changes
-function broadcastVipStatus()
-    local vipPlayers = {}
-    for _, player in ipairs(Game.getPlayers()) do
-        if player:isVip() then
-            table.insert(vipPlayers, player:getName())
-        end
-    end
-    
-    local data = json.encode({
-        action = "vipList",
-        data = { players = vipPlayers }
-    })
-    
-    for _, player in ipairs(Game.getPlayers()) do
-        player:sendExtendedOpcode(VIP_OPCODE, data)
-    end
-end
-
--- Send VIP status to a specific player
-function sendVipStatusToPlayer(player)
-    local vipPlayers = {}
-    for _, p in ipairs(Game.getPlayers()) do
-        if p:isVip() then
-            table.insert(vipPlayers, p:getName())
-        end
-    end
-    
-    player:sendExtendedOpcode(VIP_OPCODE, json.encode({
-        action = "vipList",
-        data = { players = vipPlayers }
-    }))
-end
-
--- Update the login event to broadcast VIP status
-local VipLoginBroadcast = CreatureEvent("VipLoginBroadcast")
-
-function VipLoginBroadcast.onLogin(player)
-    -- Delay to ensure player is fully loaded
-    addEvent(function(playerId)
-        local p = Player(playerId)
-        if p then
-            sendVipStatusToPlayer(p)
-            -- If this player is VIP, broadcast to everyone
-            if p:isVip() then
-                broadcastVipStatus()
-            end
-        end
-    end, 1000, player:getId())
-    
-    return true
-end
-
-VipLoginBroadcast:register()
 
 -- Global event to decrease VIP days at midnight (server save)
 local VipDailyDecrease = GlobalEvent("VipDailyDecrease")

@@ -1,35 +1,49 @@
 local summonName = "[Pet] Manda"
 
+local function doSummonPet(playerId)
+    local player = Player(playerId)
+    if not player then
+        return
+    end
+    
+    local playerPosition = player:getPosition()
+    local tile = Tile(playerPosition)
+    
+    -- Check if player is in protection zone
+    if tile and tile:hasFlag(TILESTATE_PROTECTIONZONE) then
+        player:sendCancelMessage("You can't summon pets in protection zone!")
+        return
+    end
+    
+    -- Check if pet is already summoned
+    local playerSummons = player:getSummons()
+    for _, summon in pairs(playerSummons) do
+        if summon:getName() == summonName then
+            return -- Pet already exists, don't summon again
+        end
+    end
+    
+    -- Try to create the monster
+    local summon = Game.createMonster(summonName, playerPosition)
+    if not summon then
+        player:sendCancelMessage("Could not summon Manda here.")
+        return
+    end
+    
+    summon:setMaster(player)
+    summon:setDropLoot(false)
+    summon:registerEvent('SummonThink')
+    player:say("Summoning Jutsu: Manda!", TALKTYPE_MONSTER_SAY)
+end
+
 function onEquip(player, item, slot, isCheck)
     if isCheck then
         return true
     end
- 
-    local playerSummons = player:getSummons(summonName)
-    local playerPosition = player:getPosition()
-    local summonsCount = 0
-
-   
-     if Tile(playerPosition):hasFlag(TILESTATE_PROTECTIONZONE) then
-        return player:sendCancelMessage("You mustn't be in PZ!")-- error msg
-    end
- 
-    for _,summon in pairs(playerSummons) do
-        if summon:getName() == summonName then
-            summonsCount = 1
-        end
-    end
- 
-    if summonsCount == 0 then
-        local summon = Game.createMonster(summonName, playerPosition)
-        summon:setMaster(player)
-        summon:setDropLoot(false)
-        summon:registerEvent('SummonThink')
-        player:say("Summoning Jutsu: Manda!", TALKTYPE_MONSTER_SAY)
-    else
-        player:sendCancelMessage("Manda is already summoned.")-- error msg
-    end
- 
+    
+    -- Delay summon to ensure player is fully loaded (fixes login crash)
+    addEvent(doSummonPet, 1000, player:getId())
+    
     return true
 end
 
