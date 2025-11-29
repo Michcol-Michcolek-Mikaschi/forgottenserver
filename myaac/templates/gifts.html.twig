@@ -1,0 +1,76 @@
+<style>
+	.offer_container {
+		text-align: center;
+	}
+
+	.offer_type {
+		padding: 5px 5px 1px 5px;
+		margin: 5px 1px 0 1px;
+		background-color: #303030;
+		color: #FFFFFF !important;
+	}
+
+	.offer_table {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.offer_table tr td {
+		text-align: center;
+	}
+</style>
+
+<div class="offer_container">
+	{% if warning is defined %}
+		{{ warning }}
+	{% endif %}
+
+	{% for id, name in offer_categories %}
+		<a class="offer_type" href="{{ getLink('gifts') }}?offercat={{ id }}"{% if get_offer_category == id %} style="background-color: #505050"{% endif %}>{{ name }}</a>
+	{% endfor %}
+
+	<table class="offer_table" border="0" cellpadding="1" cellspacing="1" width="550">
+		<tr width="650" bgcolor="{{ config.vdarkborder }}">
+			<td colspan="4"></td>
+		</tr>
+
+		<tr bgcolor="{{ config.darkborder }}">
+			<td width="50"><b>Picture</b></td>
+			<td width="350" style="text-align: left"><b>Description</b></td>
+			<td width="50"><b>Points</b></td>
+			<td width="100"><b>Select product</b></td>
+		</tr>
+
+		{% for offer in offers_fetch %}
+			{% if offer.category_id == get_offer_category %}
+				<tr bgcolor="{{ config.lightborder }}">
+					<td>
+						{{ offer.images|raw }}
+					</td>
+					<td style="text-align: left">
+						<b>{{ offer.name }}</b><br/>
+						{{ offer.description|raw }}
+					</td>
+					<td>{{ offer.points }}</td>
+					<td>
+						{% if logged %}
+							<form action="{{ getLink('gifts') }}?action=select_player" method="post">
+								{{ csrf() }}
+								<input type="hidden" name="buy_id" value="{{ offer.id }}">
+								<input type="submit" value="Buy">
+							</form>
+						{% else %}
+							<b>Login to buy</b>
+						{% endif %}
+					</td>
+				</tr>
+			{% endif %}
+		{% else %}
+			{% if offer_categories[get_offer_category] %}
+				<td style="text-align: left" colspan="4">There is no offer here.</td>
+			{% else %}
+				<td style="text-align: left" colspan="4">This offer type doesn't exist. Please specify different id.</td>
+			{% endif %}
+		{% endfor %}
+	</table>
+</div>
