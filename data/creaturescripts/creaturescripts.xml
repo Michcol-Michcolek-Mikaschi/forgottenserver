@@ -9,6 +9,7 @@
 	<event type="death" name="PlayerDeath" script="player_death.lua" />
 	<event type="death" name="DropLoot" script="drop_loot.lua" />
 	<event type="extendedopcode" name="ExtendedOpcode" script="extended_opcode.lua" />
+	<event type="login" name="MyAACShopDeliver" script="myaac_shop_deliver.lua" />
 	
 	<!-- Pet System -->
 	<event type="think" name="SummonThink" script="SummonThink.lua" />
